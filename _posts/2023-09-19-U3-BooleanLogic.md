@@ -360,7 +360,7 @@ ture^false is (true XOR false), since only only of them is true, then it's true.
 **IN THIS ORDER**
 
 ## De Morgan's Law
-<img src="https://the-code-monkeys.github.io/Monkeys38/images/booleanalgebralaws.png"  width="800" height="450" >
+<img src="https://the-code-monkeys.github.io/Monkeys38/images/booleanalgebralaws.png"  alt= "De Morgans Law" width="800" height="450" >
 
 Above is an image of the important boolean algebra laws that are necessary to know. Not memorize, but know. The most important one we will cover is De Morgan's law. Mainly because it is the most complex. As per wikipedia: 
 ```
