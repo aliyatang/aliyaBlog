@@ -16,11 +16,3 @@ Hi, I'm Aliya and I'm a junior at Del Norte High School. I'm interested in study
 | 3   | APEL        | Mrs. Darcey    |
 | 4   | AP Calc BC  | Mr. Bernabeo   |
 | 5   | Offroll     | N/A            |
-
-
-## Hacks, Study and Tangibles
-Blogging in GitHub pages is a way to learn and code at the same time. 
-
-- [Scrum Boards](https://clickup.com/blog/scrum-board/) 
-- [Hacks(Todo)](https://levelup.gitconnected.com/six-ultimate-daily-hacks-for-every-programmer-60f5f10feae) 
-- [Tangible Artifacts](https://en.wikipedia.org/wiki/Artifact_(software_development))
