@@ -1,0 +1,251 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/aliyaBlog/</id>
+  <title>Aliya Tang</title>
+  <subtitle>Computer Science Guides, AP Test Prep, and more!</subtitle>
+  <updated>2023-10-28T04:45:24+08:00</updated>
+  <author>
+    <name>Aliya W. Tang</name>
+    <uri>http://localhost:4000/aliyaBlog/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/aliyaBlog/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/aliyaBlog/"/>
+  <generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator>
+  <rights> © 2023 Aliya W. Tang </rights>
+  <icon>/aliyaBlog/assets/img/favicons/favicon.ico</icon>
+  <logo>/aliyaBlog/assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>U3 Boolean Logic</title>
+    <link href="http://localhost:4000/aliyaBlog/posts/U3-BooleanLogic/" rel="alternate" type="text/html" title="U3 Boolean Logic" />
+    <published>2023-09-19T00:00:00+08:00</published>
+  
+    <updated>2023-10-28T04:41:26+08:00</updated>
+  
+    <id>http://localhost:4000/aliyaBlog/posts/U3-BooleanLogic/</id>
+    <content src="http://localhost:4000/aliyaBlog/posts/U3-BooleanLogic/" />
+    <author>
+      <name>Aliya W. Tang</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Data Tables!
+
+Truth tables are used to easily describe boolean algebra operations. Boolean algebra is an branch of mathematics dealing with, rather than the vast stretches of integers, two digits: 1 and 0 (or true and false).
+
+There are many different types of boolean operations, and we’ll be covering them all here. We also have an interactive quiz that allows you to see how good you are at thi...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>CS Panel Takeaways</title>
+    <link href="http://localhost:4000/aliyaBlog/posts/CS-panel/" rel="alternate" type="text/html" title="CS Panel Takeaways" />
+    <published>2023-09-19T00:00:00+08:00</published>
+  
+    <updated>2023-09-19T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/aliyaBlog/posts/CS-panel/</id>
+    <content src="http://localhost:4000/aliyaBlog/posts/CS-panel/" />
+    <author>
+      <name>Aliya W. Tang</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      As my time for college applications nears and my sister’s recent departure for college as a Computer Science major, I have been spending a lot of time thinking about what major I should pursue. More specifically, I’ve been looking into computer science, data science, and statistics. This panel has given me some clarity and considerable information on my decision of what path to take.
+
+Diverse A...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Problems and Fixes!</title>
+    <link href="http://localhost:4000/aliyaBlog/posts/problems/" rel="alternate" type="text/html" title="Problems and Fixes!" />
+    <published>2023-08-23T00:00:00+08:00</published>
+  
+    <updated>2023-08-23T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/aliyaBlog/posts/problems/</id>
+    <content src="http://localhost:4000/aliyaBlog/posts/problems/" />
+    <author>
+      <name>Aliya W. Tang</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Problems and Fixes!
+Documentation and solutions to problems I run into.
+
+Theme not Showing on Github Pages
+A problem I ran into this week was my theme showing up on my local server not showing up on the github pages server. Instead, it was a totally unformatted page. I spent a while checking with my partner (because her theme was working) and trying fixes from online sources. However, I nothing...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>JS Calculator</title>
+    <link href="http://localhost:4000/aliyaBlog/techtalk/home_style" rel="alternate" type="text/html" title="JS Calculator" />
+    <published>2023-08-23T00:00:00+08:00</published>
+  
+    <updated>2023-08-23T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/aliyaBlog/techtalk/home_style</id>
+    <content src="http://localhost:4000/aliyaBlog/techtalk/home_style" />
+    <author>
+      <name>Aliya W. Tang</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+  
+      
+      0
+      
+      1
+      2
+      3
+      +
+      
+      4
+      5
+      6
+      -
+      
+      7
+      8
+      9
+      *
+      
+      A/C
+      0
+      .
+      =
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Console Games - RPS, Higher Lower, Tic-Tac-Toe</title>
+    <link href="http://localhost:4000/aliyaBlog/posts/java-console_games_IPYNB_2_/" rel="alternate" type="text/html" title="Console Games - RPS, Higher Lower, Tic-Tac-Toe" />
+    <published>2023-08-23T00:00:00+08:00</published>
+  
+    <updated>2023-08-23T00:00:00+08:00</updated>
+  
+    <id>http://localhost:4000/aliyaBlog/posts/java-console_games_IPYNB_2_/</id>
+    <content src="http://localhost:4000/aliyaBlog/posts/java-console_games_IPYNB_2_/" />
+    <author>
+      <name>Aliya W. Tang</name>
+    </author>
+
+  
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Console Games - RPS, Higher Lower, Tic-Tac-Toe
+Console games that show elements from College Board’s Units
+
+Hacks
+
+  To start the year, I want you to consider a simple Java console game or improve on the games listed.
+  
+    Make RPS, Tic-Tack-Toe, and Higher Lower into different objects.  Answer why you think this is important?: You can isolate the games from each other: each game object can h...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
