@@ -47,7 +47,7 @@ courses: {'csa': {'week': 0}}
 <div>
     <div style="float: left; margin: 0px 10px 10px 0px;">
         <a href="https://marketplace.visualstudio.com/vscode">
-            <img alt="Extensions" src="{{site.baseurl}}/images/extensions.png" title="VS Code Marketplace" width="250">
+            <img alt="Extensions" src="/assets/img/extensions.png" title="VS Code Marketplace" width="250">
         </a>
     </div>
     <div>
@@ -84,7 +84,7 @@ courses: {'csa': {'week': 0}}
 <div>
     <div style="float: left; margin: 0px 10px 10px 0px;">
         <a href="https://marketplace.visualstudio.com/vscode">
-            <img alt="Extensions" src="{{site.baseurl}}/assets/img/extensions.png" title="VS Code Marketplace" width="250">
+            <img alt="Extensions" src="/assets/img/extensions.png" title="VS Code Marketplace" width="250">
         </a>
     </div>
     <div>
