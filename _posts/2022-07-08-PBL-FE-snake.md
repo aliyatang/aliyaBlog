@@ -1,95 +1,80 @@
 ---
 title: Classic Snake Game
-author: 
-date: 2019-08-11 00:34:00 +0800
+author: Aliya Tang
 categories: [Games]
 tags: [javascript]
 type: tangibles
 ---
 <style>
-body {
-    height: 100%;
+
+    body{
     }
-  body {
-    background: white;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  canvas {
-    background: #abfc8b;
-    text-align:center;
-    border: 8px;
-    border-color: black;
-    padding-left: 0;
-    padding-right: 0;
-    top: 150px;
-    left: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    position: absolute;
-  }
-  :root {
-    --apple: blue;
-    --snake: purple;
-  }
-  #p1 {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  
-  }
-  #p2 {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  }
-  #score {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  }
-  #high {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  }
-  #btn_stop {
-    color:purple;
-    position:absolute;
-    bottom: 50px;
-    right: 43%;
-  }
-  #end_msg {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 20px;
-  }
-  button {
-    border-radius: 20px;
-    background-color: white;
-    color: purple;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-  }
+    .wrap{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    canvas{
+        display: none;
+        border-style: solid;
+        border-width: 10px;
+        border-color: #FFFFFF;
+    }
+    canvas:focus{
+        outline: none;
+    }
+
+    /* All screens style */
+    #gameover p, #setting p, #menu p{
+        font-size: 20px;
+    }
+
+    #gameover a, #setting a, #menu a{
+        font-size: 30px;
+        display: block;
+    }
+
+    #gameover a:hover, #setting a:hover, #menu a:hover{
+        cursor: pointer;
+    }
+
+    #gameover a:hover::before, #setting a:hover::before, #menu a:hover::before{
+        content: ">";
+        margin-right: 10px;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    #gameover{
+        display: none;
+    }
+
+    #setting{
+        display: none;
+    }
+
+    #setting input{
+        display:none;
+    }
+
+    #setting label{
+        cursor: pointer;
+    }
+
+    #setting input:checked + label{
+        background-color: #FFF;
+        color: #000;
+    }
 </style>
 
 
 <div class="container">
+    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+        <p class="fs-4">Snake score: <span id="score_value">0</span></p>
+    </header>
     <div class="container bg-secondary" style="text-align:center;">
-    <p class="fs-4">Snake score: <span id="score_value">0</span></p>
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
             <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
@@ -384,4 +369,3 @@ body {
         }
     })();
 </script>
-
