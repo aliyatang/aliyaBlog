@@ -1,0 +1,5 @@
+User-agent: *
+
+Disallow: /norobots/
+
+Sitemap: https://aliyatang.github.io/aliyaBlog/sitemap.xml
