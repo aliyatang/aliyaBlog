@@ -49,7 +49,7 @@ $ python --version # version of python3 installed
 ```
 ### Windows 1st Time Developer
 > VSCode install using WSL. Windows users have option to have best of Windows and Linux while developing within VSCode.
-- Install [VSCode using WSL]({{site.baseurl}}/techtalk/vscode-wsl).
+- Install VSCode using WSL
 - Required review, become familiar with [Windows WSL development](https://code.visualstudio.com/docs/remote/wsl-tutorial)
 
 > Anaconda install on WSL.

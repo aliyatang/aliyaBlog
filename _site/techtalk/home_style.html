@@ -35,24 +35,24 @@
   
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
-<meta property="og:title" content="About" />
+<meta property="og:title" content="JS Calculator" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="Aliya’s GitHub Page Hi, I’m Aliya and I’m a junior at Del Norte High School. I’m interested in studying computer science or data science in the future, so I’m excited to see what another year of code code code has to bring us. Outside of academics, I like to cook, paint, and spend time with friends and family." />
-<meta property="og:description" content="Aliya’s GitHub Page Hi, I’m Aliya and I’m a junior at Del Norte High School. I’m interested in studying computer science or data science in the future, so I’m excited to see what another year of code code code has to bring us. Outside of academics, I like to cook, paint, and spend time with friends and family." />
-<link rel="canonical" href="https://aliyatang.github.io/aliyaBlog/about/" />
-<meta property="og:url" content="https://aliyatang.github.io/aliyaBlog/about/" />
+<meta name="description" content="A common way to become familiar with a language is to build a calculator. This calculator shows off button with actions." />
+<meta property="og:description" content="A common way to become familiar with a language is to build a calculator. This calculator shows off button with actions." />
+<link rel="canonical" href="https://aliyatang.github.io/aliyaBlog/techtalk/home_style" />
+<meta property="og:url" content="https://aliyatang.github.io/aliyaBlog/techtalk/home_style" />
 <meta property="og:site_name" content="Aliya Tang" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2023-10-29T23:42:41+08:00" />
+<meta property="article:published_time" content="2023-08-23T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="About" />
+<meta property="twitter:title" content="JS Calculator" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","dateModified":"2023-10-29T23:42:41+08:00","datePublished":"2023-10-29T23:42:41+08:00","description":"Aliya’s GitHub Page Hi, I’m Aliya and I’m a junior at Del Norte High School. I’m interested in studying computer science or data science in the future, so I’m excited to see what another year of code code code has to bring us. Outside of academics, I like to cook, paint, and spend time with friends and family.","headline":"About","name":"Aliya W. Tang","sameAs":["https://github.com/aliyatang"],"url":"https://aliyatang.github.io/aliyaBlog/about/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-08-23T00:00:00+08:00","datePublished":"2023-08-23T00:00:00+08:00","description":"A common way to become familiar with a language is to build a calculator. This calculator shows off button with actions.","headline":"JS Calculator","mainEntityOfPage":{"@type":"WebPage","@id":"https://aliyatang.github.io/aliyaBlog/techtalk/home_style"},"url":"https://aliyatang.github.io/aliyaBlog/techtalk/home_style"}</script>
 <!-- End Jekyll SEO tag -->
 
   
 
-  <title>About | Aliya Tang
+  <title>JS Calculator | Aliya Tang
   </title>
 
   <!--
@@ -104,14 +104,11 @@
   <link rel="stylesheet" href="/aliyaBlog/assets/css/jekyll-theme-chirpy.css">
 
   
-
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tocbot@4.21.2/dist/tocbot.min.css">
   
 
   
-    <!-- Manific Popup -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/magnific-popup@1.1.0/dist/magnific-popup.min.css">
+
   
 
   <!-- JavaScript -->
@@ -298,7 +295,7 @@
       </li>
       <!-- the real tabs -->
       
-        <li class="nav-item active">
+        <li class="nav-item">
           <a href="/aliyaBlog/about/" class="nav-link">
             <i class="fa-fw fas fa-info-circle"></i>
             
@@ -475,8 +472,10 @@
           
         
           
+        
+          
             
-              <span>About</span>
+              <span>JS Calculator</span>
             
 
           
@@ -490,7 +489,7 @@
     </button>
 
     <div id="topbar-title">
-      About
+      Default
     </div>
 
     <button type="button" id="search-trigger" class="btn btn-link">
@@ -516,226 +515,216 @@
         <div class="row flex-grow-1">
           <main aria-label="Main Content" class="col-12 col-lg-11 col-xl-9 px-md-4">
             
-              <!-- Refactor the HTML structure -->
-
-
-
-<!--
-  In order to allow a wide table to scroll horizontally,
-  we suround the markdown table with `<div class="table-wrapper">` and `</div>`
+              <!-- 
+Hack 0: Right justify result
+Hack 1: Test conditions on small, big, and decimal numbers, report on findings. Fix issues.
+Hack 2: Add the common math operation that is missing from calculator
+Hack 3: Implement 1 number operation (ie SQRT) 
 -->
 
-
-
-<!--
-  Fixed kramdown code highlight rendering:
-  https://github.com/penibelst/jekyll-compress-html/issues/101
-  https://github.com/penibelst/jekyll-compress-html/issues/71#issuecomment-188144901
+<!-- 
+HTML implementation of the calculator. 
 -->
 
-
-
-<!-- Change the icon of checkbox -->
-
-
-
-<!-- Handle images -->
-
-
-
-
+<!-- 
+    Style and Action are aligned with HRML class definitions
+    style.css contains majority of style definition (number, operation, clear, and equals)
+    - The div calculator-container sets 4 elements to a row
+    Background is credited to Vanta JS and is implemented at bottom of this page
+-->
+<style>
+  .calculator-output {
+    /* calulator output 
+      top bar shows the results of the calculator;
+      result to take up the entirety of the first row;
+      span defines 4 columns and 1 row
+    */
+    grid-column: span 4;
+    grid-row: span 1;
   
+    border-radius: 10px;
+    padding: 0.25em;
+    font-size: 20px;
+    border: 5px solid black;
   
+    display: flex;
+    align-items: center;
+  }
+</style>
 
-  <!-- CDN URL -->
-  
+<!-- Add a container for the animation -->
+<div id="animation">
+  <div class="calculator-container">
+      <!--result-->
+      <div class="calculator-output" id="output">0</div>
+      <!--row 1-->
+      <div class="calculator-number">1</div>
+      <div class="calculator-number">2</div>
+      <div class="calculator-number">3</div>
+      <div class="calculator-operation">+</div>
+      <!--row 2-->
+      <div class="calculator-number">4</div>
+      <div class="calculator-number">5</div>
+      <div class="calculator-number">6</div>
+      <div class="calculator-operation">-</div>
+      <!--row 3-->
+      <div class="calculator-number">7</div>
+      <div class="calculator-number">8</div>
+      <div class="calculator-number">9</div>
+      <div class="calculator-operation">*</div>
+      <!--row 4-->
+      <div class="calculator-clear">A/C</div>
+      <div class="calculator-number">0</div>
+      <div class="calculator-number">.</div>
+      <div class="calculator-equals">=</div>
+  </div>
+</div>
 
-  <!-- Add image path -->
-  
+<!-- JavaScript (JS) implementation of the calculator. -->
+<script>
+// initialize important variables to manage calculations
+var firstNumber = null;
+var operator = null;
+var nextReady = true;
+// build objects containing key elements
+const output = document.getElementById("output");
+const numbers = document.querySelectorAll(".calculator-number");
+const operations = document.querySelectorAll(".calculator-operation");
+const clear = document.querySelectorAll(".calculator-clear");
+const equals = document.querySelectorAll(".calculator-equals");
 
-  
-    
-      
-      
-    
+// Number buttons listener
+numbers.forEach(button => {
+  button.addEventListener("click", function() {
+    number(button.textContent);
+  });
+});
 
-    
-    
+// Number action
+function number (value) { // function to input numbers into the calculator
+    if (value != ".") {
+        if (nextReady == true) { // nextReady is used to tell the computer when the user is going to input a completely new number
+            output.innerHTML = value;
+            if (value != "0") { // if statement to ensure that there are no multiple leading zeroes
+                nextReady = false;
+            }
+        } else {
+            output.innerHTML = output.innerHTML + value; // concatenation is used to add the numbers to the end of the input
+        }
+    } else { // special case for adding a decimal; can't have two decimals
+        if (output.innerHTML.indexOf(".") == -1) {
+            output.innerHTML = output.innerHTML + value;
+            nextReady = false;
+        }
+    }
+}
 
-    
+// Operation buttons listener
+operations.forEach(button => {
+  button.addEventListener("click", function() {
+    operation(button.textContent);
+  });
+});
 
-    
-    
+// Operator action
+function operation (choice) { // function to input operations into the calculator
+    if (firstNumber == null) { // once the operation is chosen, the displayed number is stored into the variable firstNumber
+        firstNumber = parseInt(output.innerHTML);
+        nextReady = true;
+        operator = choice;
+        return; // exits function
+    }
+    // occurs if there is already a number stored in the calculator
+    firstNumber = calculate(firstNumber, parseFloat(output.innerHTML)); 
+    operator = choice;
+    output.innerHTML = firstNumber.toString();
+    nextReady = true;
+}
 
-    
-    
-    
+// Calculator
+function calculate (first, second) { // function to calculate the result of the equation
+    let result = 0;
+    switch (operator) {
+        case "+":
+            result = first + second;
+            break;
+        case "-":
+            result = first - second;
+            break;
+        case "*":
+            result = first * second;
+            break;
+        case "/":
+            result = first / second;
+            break;
+        default: 
+            break;
+    }
+    return result;
+}
 
-    
-      
+// Equals button listener
+equals.forEach(button => {
+  button.addEventListener("click", function() {
+    equal();
+  });
+});
 
-      
-      
-      
+// Equal action
+function equal () { // function used when the equals button is clicked; calculates equation and displays it
+    firstNumber = calculate(firstNumber, parseFloat(output.innerHTML));
+    output.innerHTML = firstNumber.toString();
+    nextReady = true;
+}
 
-      
-    
-      
+// Clear button listener
+clear.forEach(button => {
+  button.addEventListener("click", function() {
+    clearCalc();
+  });
+});
 
-      
-      
-      
+// A/C action
+function clearCalc () { // clears calculator
+    firstNumber = null;
+    output.innerHTML = "0";
+    nextReady = true;
+}
+</script>
 
-      
-    
+<!-- 
+Vanta animations just for fun, load JS onto the page
+-->
+<script src="/teacher/assets/js/three.r119.min.js"></script>
 
-    <!-- take out classes -->
-    
+<script src="/teacher/assets/js/vanta.halo.min.js"></script>
 
-    
-    
+<script src="/teacher/assets/js/vanta.birds.min.js"></script>
 
-    
+<script src="/teacher/assets/js/vanta.net.min.js"></script>
 
-    
-      
-    
+<script src="/teacher/assets/js/vanta.rings.min.js"></script>
 
-    <!-- lazy-load images -->
-    
+<script>
+// setup vanta scripts as functions
+var vantaInstances = {
+  halo: VANTA.HALO,
+  birds: VANTA.BIRDS,
+  net: VANTA.NET,
+  rings: VANTA.RINGS
+};
 
-    
-      <!-- make sure the `<img>` is wrapped by `<a>` -->
-      
+// obtain a random vanta function
+var vantaInstance = vantaInstances[Object.keys(vantaInstances)[Math.floor(Math.random() * Object.keys(vantaInstances).length)]];
 
-      
-        <!-- create the image wrapper -->
-        
-
-        
-        
-      
-    
-
-    <!-- combine -->
-    
-  
-
-  
-
-
-<!-- Add header for code snippets -->
-
-
-
-<!-- Create heading anchors -->
-
-
-
-
-
-  
-  
-
-  
-    
-    
-
-    
-      
-        
-        
-      
-
-      
-      
-
-      
-      
-      
-
-      
-    
-
-    
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-  
-  
-
-  
-
-
-
-
-<!-- return -->
-
-
-
-
-<article class="px-1">
-  
-    
-    
-    <h1 class="dynamic-title">
-      About
-    </h1>
-    <div class="content">
-      <h2 id="aliyas-github-page"><span class="me-2">Aliya’s GitHub Page</span><a href="#aliyas-github-page" class="anchor text-muted"><i class="fas fa-hashtag"></i></a></h2>
-<p>Hi, I’m Aliya and I’m a junior at Del Norte High School. I’m interested in studying computer science or data science in the future, so I’m excited to see what another year of code code code has to bring us. Outside of academics, I like to cook, paint, and spend time with friends and family.</p>
-
-<p><a href="https://github.com/aliyatang/studentAliya/blob/main/images/aliyadrawing.png?raw=true" class="popup img-link  shimmer"><img src="https://github.com/aliyatang/studentAliya/blob/main/images/aliyadrawing.png?raw=true" alt="This is an image" loading="lazy"></a></p>
-
-<div class="table-wrapper"><table>
-  <thead>
-    <tr>
-      <th>Period</th>
-      <th>Class</th>
-      <th>Teacher</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>1</td>
-      <td>AP CSA</td>
-      <td>Mr. Mortenson</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>AP Physics</td>
-      <td>Mr. Liao</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>APEL</td>
-      <td>Mrs. Darcey</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>AP Calc BC</td>
-      <td>Mr. Bernabeo</td>
-    </tr>
-    <tr>
-      <td>5</td>
-      <td>Offroll</td>
-      <td>N/A</td>
-    </tr>
-  </tbody>
-</table></div>
-
-    </div>
-  
-</article>
+// run the animation
+vantaInstance({
+  el: "#animation",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false
+});
+</script>
 
 
             
@@ -1003,13 +992,6 @@
 <!-- layout specified -->
 
 
-  
-
-  
-    <!-- image lazy-loading & popup & clipboard -->
-    
-  
-
 
 
 
@@ -1045,44 +1027,16 @@
 
   
 
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
-
-  
-    
-
-    
-
-  
 
 
-
-  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js,npm/loading-attribute-polyfill@2.1.1/dist/loading-attribute-polyfill.umd.min.js,npm/magnific-popup@1.1.0/dist/jquery.magnific-popup.min.js,npm/clipboard@2.0.11/dist/clipboard.min.js,npm/tocbot@4.21.2/dist/tocbot.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.7.1/dist/jquery.min.js,npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js,npm/simple-jekyll-search@1.10.0/dest/simple-jekyll-search.min.js"></script>
 
 
 
 
 
 
-<script defer src="/aliyaBlog/assets/js/dist/page.min.js"></script>
+<script defer src="/aliyaBlog/assets/js/dist/commons.min.js"></script>
 
 
 
