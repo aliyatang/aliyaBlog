@@ -41,7 +41,7 @@ const resource = [
 const allowedDomains = [
   
 
-  'localhost:4000',
+  'aliyatang.github.io',
 
   
 

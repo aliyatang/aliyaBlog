@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: http://localhost:4000/aliyaBlog/sitemap.xml
+Sitemap: https://aliyatang.github.io/aliyaBlog/sitemap.xml
