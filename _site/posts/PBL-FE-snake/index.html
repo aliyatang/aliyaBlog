@@ -36,6 +36,7 @@
     <!-- Begin Jekyll SEO tag v2.8.0 -->
 <meta name="generator" content="Jekyll v4.3.2" />
 <meta property="og:title" content="Classic Snake Game" />
+<meta name="author" content="Aliya Tang" />
 <meta property="og:locale" content="en" />
 <meta name="description" content="Computer Science Guides, AP Test Prep, and more!" />
 <meta property="og:description" content="Computer Science Guides, AP Test Prep, and more!" />
@@ -43,11 +44,11 @@
 <meta property="og:url" content="https://aliyatang.github.io/aliyaBlog/posts/PBL-FE-snake/" />
 <meta property="og:site_name" content="Aliya Tang" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2019-08-11T00:34:00+08:00" />
+<meta property="article:published_time" content="2022-07-08T00:00:00+08:00" />
 <meta name="twitter:card" content="summary" />
 <meta property="twitter:title" content="Classic Snake Game" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2019-08-11T00:34:00+08:00","datePublished":"2019-08-11T00:34:00+08:00","description":"Computer Science Guides, AP Test Prep, and more!","headline":"Classic Snake Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://aliyatang.github.io/aliyaBlog/posts/PBL-FE-snake/"},"url":"https://aliyatang.github.io/aliyaBlog/posts/PBL-FE-snake/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"Aliya Tang"},"dateModified":"2023-10-29T21:26:08+08:00","datePublished":"2022-07-08T00:00:00+08:00","description":"Computer Science Guides, AP Test Prep, and more!","headline":"Classic Snake Game","mainEntityOfPage":{"@type":"WebPage","@id":"https://aliyatang.github.io/aliyaBlog/posts/PBL-FE-snake/"},"url":"https://aliyatang.github.io/aliyaBlog/posts/PBL-FE-snake/"}</script>
 <!-- End Jekyll SEO tag -->
 
   
@@ -605,18 +606,41 @@
 
 <time
   
-  data-ts="1565454840"
+  data-ts="1657209600"
   data-df="ll"
   
     data-bs-toggle="tooltip" data-bs-placement="bottom"
   
 >
-  Aug 11, 2019
+  Jul  8, 2022
 </time>
 
       </span>
 
       <!-- lastmod date -->
+      
+        <span>
+          Updated
+          <!--
+  Date format snippet
+  See: ${JS_ROOT}/utils/locale-dateime.js
+-->
+
+
+
+
+<time
+  
+  data-ts="1698585968"
+  data-df="ll"
+  
+    data-bs-toggle="tooltip" data-bs-placement="bottom"
+  
+>
+  Oct 29, 2023
+</time>
+
+        </span>
       
 
       
@@ -630,7 +654,10 @@
 
           <em>
             
-              <a href="https://github.com/aliyatang">Aliya W. Tang</a>
+              
+                <a href=""></a>
+                
+              
             
           </em>
         </span>
@@ -668,88 +695,74 @@
 
   <div class="content">
     <style>
-body {
-    height: 100%;
+
+    body{
     }
-  body {
-    background: white;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-  }
-  canvas {
-    background: #abfc8b;
-    text-align:center;
-    border: 8px;
-    border-color: black;
-    padding-left: 0;
-    padding-right: 0;
-    top: 150px;
-    left: 35%;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    position: absolute;
-  }
-  :root {
-    --apple: blue;
-    --snake: purple;
-  }
-  #p1 {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  
-  }
-  #p2 {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  }
-  #score {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  }
-  #high {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 25px;
-  }
-  #btn_stop {
-    color:purple;
-    position:absolute;
-    bottom: 50px;
-    right: 43%;
-  }
-  #end_msg {
-    color:purple;
-    position:relative;
-    padding-left: 50px;
-    padding-top: 20px;
-  }
-  button {
-    border-radius: 20px;
-    background-color: white;
-    color: purple;
-    font-size: 12px;
-    font-weight: bold;
-    padding: 12px 45px;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    transition: transform 80ms ease-in;
-  }
+    .wrap{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    canvas{
+        display: none;
+        border-style: solid;
+        border-width: 10px;
+        border-color: #FFFFFF;
+    }
+    canvas:focus{
+        outline: none;
+    }
+
+    /* All screens style */
+    #gameover p, #setting p, #menu p{
+        font-size: 20px;
+    }
+
+    #gameover a, #setting a, #menu a{
+        font-size: 30px;
+        display: block;
+    }
+
+    #gameover a:hover, #setting a:hover, #menu a:hover{
+        cursor: pointer;
+    }
+
+    #gameover a:hover::before, #setting a:hover::before, #menu a:hover::before{
+        content: ">";
+        margin-right: 10px;
+    }
+
+    #menu{
+        display: block;
+    }
+
+    #gameover{
+        display: none;
+    }
+
+    #setting{
+        display: none;
+    }
+
+    #setting input{
+        display:none;
+    }
+
+    #setting label{
+        cursor: pointer;
+    }
+
+    #setting input:checked + label{
+        background-color: #FFF;
+        color: #000;
+    }
 </style>
 
 <div class="container">
+    <header class="pb-3 mb-4 border-bottom border-primary text-dark">
+        <p class="fs-4">Snake score: <span id="score_value">0</span></p>
+    </header>
     <div class="container bg-secondary" style="text-align:center;">
-    <p class="fs-4">Snake score: <span id="score_value">0</span></p>
         <!-- Main Menu -->
         <div id="menu" class="py-4 text-light">
             <p>Welcome to Snake, press <span style="background-color: #FFFFFF; color: #000000">space</span> to begin</p>
@@ -1184,6 +1197,13 @@ body {
   <section id="access-lastmod">
     <h2 class="panel-heading">Recently Updated</h2>
     <ul class="content list-unstyled ps-0 pb-1 ms-1 mt-2">
+      
+        
+        
+        
+        <li class="text-truncate lh-lg">
+          <a href="/aliyaBlog/posts/PBL-FE-snake/">Classic Snake Game</a>
+        </li>
       
         
         
