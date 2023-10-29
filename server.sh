@@ -6,8 +6,6 @@ log_file="/tmp/jekyll${port}.log"
 # Exceptions will stop make
 shell="/bin/bash"
 
-
-
 # Set source and target directories
 source_directory="_notebooks"
 destination_directory="_posts"
@@ -56,5 +54,3 @@ function server () {
     echo "Starting server..."
     bundle exec jekyll serve
 }
-
-server
