@@ -16,3 +16,7 @@ Hi, I'm Aliya and I'm a junior at Del Norte High School. I'm interested in study
 | 3   | APEL        | Mrs. Darcey    |
 | 4   | AP Calc BC  | Mr. Bernabeo   |
 | 5   | Offroll     | N/A            |
+
+# Past Projects
+- [Cafegato](https://drewreed2005.github.io/cafegato/) is a website that promotes a theoretical cat cafe. I made the [Purr-dle](https://drewreed2005.github.io/cafegato/games) game and the game leaderboard for it (the leaderboard database is no longer active).
+- [](https://srihitakott1213.github.io/DVASS/games/) is a website that features various card games and a leaderboard (the leaderboard database is no longer active). I made the [War](https://srihitakott1213.github.io/DVASS/war/) card game. 
