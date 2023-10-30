@@ -203,9 +203,7 @@ for (var animal of animals) {
 # Draw.io
 - Draw.io is a tool that you can use right in vscode as an extension
 - This tool can help you visualize the classes you have in your program and how they relate to eachother
-
 <br>
-![Draw_io_example]({{site.baseurl}}/images/draw_io_example.png)
 
 ![draw_io_example.png](attachment:draw_io_example.png)
 

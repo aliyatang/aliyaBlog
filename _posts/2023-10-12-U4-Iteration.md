@@ -3,8 +3,8 @@ comments: True
 layout: post
 title: Unit 4 Iteration
 description: Lesson on the College Board Unit 4 Iteration
-courses: {'csa': {'week': 8}}
-type: hacks
+week: 8
+type: ccc
 categories: ['AP Test Prep', 'Java']
 ---
 
