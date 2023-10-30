@@ -5,7 +5,7 @@ layout: post
 title: Linux Shell and Bash
 description: Tech Talk on Linux and the Bash shell.
 type: tangibles
-week: 1
+courses: { csa: {week: 1} }
 categories: ['Tools']
 ---
 
