@@ -4,7 +4,7 @@ comments: true
 layout: post
 title: Tools Setup
 description: Become one with your tools.  They could be more important than code, code, code.
-type: plans
+type: hacks
 courses: { csa: {week: 0} }
 categories: [Tools]
 ---

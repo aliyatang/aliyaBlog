@@ -2,7 +2,7 @@
 toc: True
 comments: True
 layout: post
-title: U9 Inheritance P1 Student
+title: Unit 9 Inheritance
 description: Lesson on Java class hierarchy.
 type: ccc
 week: 11
