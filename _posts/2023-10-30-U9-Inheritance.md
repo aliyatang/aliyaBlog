@@ -1134,7 +1134,7 @@ Create a superclass with at least 2 subclasses based on your own topic.
 
 lombok can generate all the code for you! do the override with lombok. it will write out all the equals for all the instance variables
 
-![Img](../assets/img/U9-Inheritance-Drawio.png)
+![Img](/assets/img/U9-Inheritance-Drawio.png)
 
 
 ```java
