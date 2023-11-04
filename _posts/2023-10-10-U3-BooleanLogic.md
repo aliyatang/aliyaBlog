@@ -1,6 +1,6 @@
 ---
 layout: post
-title: U3 Boolean Logic
+title: Unit 3 Boolean Logic
 description: Lesson on boolean logics!
 courses: {csa: {week: 1}}
 type: lessons
