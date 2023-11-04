@@ -10,7 +10,7 @@ authors: David, Alex, Drew, Derrick, Jishnu
 ---
 
 ## 9.1 Superclasses and Subclasses
-> A hierarchy of classes is created, extending attributes into subclasses of information (ie. Automobile --> Trucks and Sedans --> Ford, BMW, Nissan, Toyota). 
+> hierarchy of classes is created, extending attributes into subclasses of information (ie. Automobile --> Trucks and Sedans --> Ford, BMW, Nissan, Toyota). 
 
 ### Pre-Requisites
 
@@ -321,6 +321,14 @@ public class Animal {
         this.species = species;
         this.milesPerHour = milesPerHour;
     }
+
+    public String getSpecies() {
+        return species;
+    }
+
+    public int getMilesPerHour() {
+        return milesPerHour;
+    }
     
 
     // parent method
@@ -330,7 +338,30 @@ public class Animal {
 }
 
 // your subclass goes here
+public class Bird extends Animal {
+    private String featherColor;
+
+    // unique constructor
+    public Bird(String species, int milesPerHour, String featherColor) {
+        super(species, milesPerHour);
+        this.featherColor = featherColor;
+    }
+    
+    // HERE is the overridden function
+    public void fly() {
+        System.out.println("The " + this.getSpecies().toLowerCase() + " with " + this.featherColor.toLowerCase() + " feathers flies at " + this.getMilesPerHour() + " miles per hour.");
+    }
+
+    public static void main(String[] args) {
+        Bird eagle = new Bird("Eagle", 50, "brown");
+        eagle.fly();
+    }
+}
+Bird.main(null);
 ```
+
+    The eagle with brown feathers flies at 50 miles per hour.
+
 
 ## 9.4 Super Keyword
 
@@ -532,6 +563,11 @@ public class Tutor extends Educator { //subclass
         super.lesson();
         System.out.println("Tutoring other students!");
     }
+
+    public static void main(String[] args){
+        Tutor Bob = new Tutor();
+        Bob.teach();
+    }
 }
 
 System.out.println("Tutor class: ");
@@ -539,16 +575,8 @@ Tutor.main(null);
 ```
 
     Tutor class: 
-
-
-
-    |   Tutor.main(null);
-
-    cannot find symbol
-
-      symbol:   method main(<nulltype>)
-
-    
+    Creating lesson plans!
+    Tutoring other students!
 
 
 # 9.5 Creating References Using Inheritance Hierarchies
@@ -609,13 +637,13 @@ Sedan v5 = new Vehicle();
 
 ```java
 // Superclass (A)
-public class Vehicles{}
+public class Pet{}
 // Subclass (B)
-public class Car extends Vehicles{}
+public class Cat extends Pet{}
 // Subclass (C)
-public class Sedan extends Car{}
+public class Dog extends Pet{}
 // Subclass (D)
-public class Truck extends Vehicles{}
+public class Poodle extends Dog{}
 ```
 
 ## Why would we want to do this?
@@ -936,16 +964,16 @@ System.out.println(node1.toString());
 
 # Popcorn Hacks
 1. Define each of the following terms in your own words
- - **Downcasting**
- - **Static Type**
- - **Dynamic Type**
- - **Polymorphism**
- - **Compile-time method**
- - **Run-time method**
+ - **Downcasting**: converting a reference variable from general type (superclass) to more specific type (subclass)
+ - **Static Type**: variable's type declared when variable defined in soruce code
+ - **Dynamic Type**: variable's actual type at runtime, may be subclass of its static type
+ - **Polymorphism**: "multiple forms", allow diff objects to be treated as instances of common superclass, more generic and interchangeable usage
+ - **Compile-time method**: method that is resolved and bound at compile time based on static type of object or reference vairable, early binding
+ - **Run-time method**: method whose invocation detremined at runtime based on dynamic type of object, late binding
 
 
 ```java
-// Do popcorn hack here
+// See definitions ABOVE
 ```
 
 # 9.7 Object Superclass
@@ -1105,3 +1133,130 @@ Create a superclass with at least 2 subclasses based on your own topic.
 - Use the `super` keyword at least once
 
 lombok can generate all the code for you! do the override with lombok. it will write out all the equals for all the instance variables
+
+![Img](../assets/img/U9-Inheritance-Drawio.png)
+
+
+```java
+// parent class
+class Plant {
+    public String name;
+    public String color;
+    private static int totalPlants = 0;
+
+    public Plant(String name, String color) {
+        this.name = name;
+        this.color = color;
+        totalPlants++;
+    }
+
+    public void grow() {
+        System.out.println(name + " is growing!");
+    }
+
+    public void water() {
+        System.out.println(name + " is being watered!");
+    }
+
+    public static int getTotalPlants() {
+        return totalPlants;
+    }
+}
+
+// subclass 1
+class Flower extends Plant {
+    private boolean hasSmell;
+    public int petalCount; 
+    private static int totalFlowers = 0;
+
+    public Flower(String name, String color, boolean hasSmell, int petalCount) {
+        super(name, color);
+        this.hasSmell = hasSmell;
+        this.petalCount = petalCount;
+        totalFlowers++;
+    }
+
+    @Override
+    public void grow() {
+        System.out.println(name + " flower is blooming!");
+    }
+
+    public void attractBees() {
+        if (hasSmell) {
+            System.out.println(name + " flower is attracting bees with its smell!");
+        } else {
+            System.out.println(name + " flower is attracting bees with its " + color + " color!");
+        }
+    }
+
+    public static int getTotalFlowers() {
+        return totalFlowers;
+    }
+}
+
+// subclass 2
+class Tree extends Plant {
+    private int height;
+    public int leafCount; 
+    private static int totalTrees = 0;
+
+    public Tree(String name, String color, int height, int leafCount) {
+        super(name, color);
+        this.height = height;
+        this.leafCount = leafCount;
+        totalTrees++;
+    }
+
+    @Override
+    public void grow() {
+        System.out.println(name + " tree is getting taller! It is " + height + " feet tall.");
+    }
+
+    public void animalHome() {
+        System.out.println(name + " tree provides homes to animals!");
+    }
+
+    public void shedLeaves(int leafCount) {
+        System.out.println(name + " tree is shedding " + leafCount + " leaves.");
+    }
+
+    public static int getTotalTrees() {
+        return totalTrees;
+    }
+}
+
+public class PlantExample {
+    public static void main(String[] args) {
+        Flower tulip = new Flower("Tulip", "Pink", false, 6);
+        Flower lavender = new Flower("Lavender", "Purple", true, 8);
+        Tree redwood = new Tree("Redwood", "Brown", 300, 500);
+
+        tulip.grow();
+        tulip.attractBees();
+
+        lavender.grow();
+        lavender.attractBees();
+
+        redwood.grow();
+        redwood.animalHome();
+        redwood.shedLeaves(200);
+
+        System.out.println("There are a total of " + Plant.getTotalPlants() + " plants!");
+        System.out.println("There are a total of " + Flower.getTotalFlowers() + " flowers!");
+        System.out.println("There are a total of " + Tree.getTotalTrees() + " trees!");
+    }
+}
+PlantExample.main(null)
+```
+
+    Tulip flower is blooming!
+    Tulip flower is attracting bees with its Pink color!
+    Lavender flower is blooming!
+    Lavender flower is attracting bees with its smell!
+    Redwood tree is getting taller! It is 300 feet tall.
+    Redwood tree provides homes to animals!
+    Redwood tree is shedding 200 leaves.
+    There are a total of 3 plants!
+    There are a total of 2 flowers!
+    There are a total of 1 trees!
+

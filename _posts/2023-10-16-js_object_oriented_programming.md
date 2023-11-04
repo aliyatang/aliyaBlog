@@ -205,7 +205,7 @@ for (var animal of animals) {
 - This tool can help you visualize the classes you have in your program and how they relate to eachother
 <br>
 
-![draw_io_example.png](attachment:draw_io_example.png)
+![draw_io_example](../assets/img/draw_io_example.png)
 
 - In this project we added multiple classes
 - This draw io board shows that a parent class can also extend a class 

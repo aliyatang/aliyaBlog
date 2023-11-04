@@ -47,7 +47,7 @@ categories: ['Tools']
 <div>
     <div style="float: left; margin: 0px 10px 10px 0px;">
         <a href="https://marketplace.visualstudio.com/vscode">
-            <img alt="Extensions" src="{{site.baseurl}}/images/extensions.png" title="VS Code Marketplace" width="250">
+            <img alt="Extensions" src="/assets/img/extensions.png" title="VS Code Marketplace" width="250">
         </a>
     </div>
     <div>
@@ -114,6 +114,13 @@ categories: ['Tools']
 </div>
 
 
+
+- In marketplace there are several extensions for Python, Python Intellisense, Python Extension Pack
+- Jupyter: This supports build jupyter ipynb files from within VS Code
+- Code Spell Checker: Got to have it when building documents, particularly if you spell and typo like the Teacher
+- IntelliCode: Got to have it when creating a code file, it will sense type of code by extension. Also, it help with syntax as you are coding.
+
+Review Details in Marketplace for better explanation of purpose of the things explained above. There is a lot more! As you need Git help look at things like Git History and GitLens. Or, perhaps you enjoy Vim and want Vim emulation for editing, their is an extension for that. Later, there may be interest in AWS Toolkit or Deploy extensions. We will learn more about Marketplace Extensions as we do more.
 
 ## Hacks
 > Setup Tools and test GitHub connection. Tool and Equipment setup is like attendance, without Tools and Equipment you are effectually absent.
