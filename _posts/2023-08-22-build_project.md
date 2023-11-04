@@ -7,6 +7,7 @@ description: Continue learning the Development work flow for GitHub Pages index.
 type: hacks
 courses: { csa: {week: 0} }
 categories: [Games, Tri 1]
+tags: [Markdown, Games]
 ---
 # Build a Project
 Continue learning the Development work flow for GitHub Pages index.md and _posts. Now is the time to build you first project.

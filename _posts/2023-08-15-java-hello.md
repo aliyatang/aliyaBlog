@@ -5,6 +5,7 @@ description: A progressive journey through Java basics starting with the classic
 courses: {'csa': {'week': 1}}
 categories: ['AP Test Prep', 'Java', 'Tri 1']
 type: tangibles
+tags: ['Java', 'AP Test Prep']
 ---
 
 ## Hello, World!

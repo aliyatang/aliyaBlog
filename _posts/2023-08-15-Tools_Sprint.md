@@ -7,6 +7,7 @@ description: Become one with your tools.  They could be more important than code
 type: hacks
 courses: { csa: {week: 0} }
 categories: [Tools, Tri 1]
+tags: [Markdown, Tools]
 ---
 
 ### PBL Sprint 0 / Week 0

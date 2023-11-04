@@ -1,11 +1,11 @@
 ---
-comments: True
 layout: post
 title: Unit 7 ArrayLists
 description: Lesson on the College Board Unit 7 ArrayLists
 type: ccc
 week: 10
 categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
+tags: ['Lesson', 'Java', 'AP Test Prep', 'Array', 'ArrayList']
 ---
 
 ## 7.1 Intro to ArrayLists

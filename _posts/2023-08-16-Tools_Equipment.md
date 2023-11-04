@@ -7,6 +7,7 @@ description: Tools and equipment setup for tools used throughout this class.
 courses: { csa: {week: 1} }
 type: hacks
 categories: [Tools]
+tags: [Markdown, Tools]
 ---
 
 ## Hacks

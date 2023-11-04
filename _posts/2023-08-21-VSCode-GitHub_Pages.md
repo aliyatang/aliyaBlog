@@ -6,6 +6,7 @@ description: A key to development in this class is the association VSCode to a G
 type: hacks
 courses: {'week': 0}
 categories: ['Tools', 'Tri 1']
+tags: ['Tools', 'Github Pages']
 ---
 
 ## Create your own GitHub Pages Project

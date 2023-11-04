@@ -1,12 +1,11 @@
 ---
-toc: True
-comments: True
 layout: post
 title: Unit 9 Inheritance
 description: Lesson on Java class hierarchy.
 type: ccc
 week: 11
 categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
+tags: ['Lesson', 'Java', 'Inheritance']
 ---
 
 ## 9.1 Superclasses and Subclasses

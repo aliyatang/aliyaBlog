@@ -1,6 +1,4 @@
 ---
-toc: True
-comments: True
 layout: post
 title: Linux Shell and Bash
 description: Tech Talk on Linux and the Bash shell.

@@ -5,6 +5,7 @@ description: Console games that show elements from College Board's Units
 courses: {'csa': {'week': 2}}
 categories: ['Games', 'Java', 'Tri 1']
 type: hacks
+tags: ['Game', 'Java']
 ---
 
 # Console Games - RPS, Higher Lower, Tic-Tac-Toe

@@ -1,12 +1,11 @@
 ---
-toc: true
-comments: true
 layout: post
 title: I Love My Tools!
 description: Become one with your tools.  They could be more important than code, code, code.
 type: hacks
 courses: { csa: {week: 0} }
 categories: [Tools, Tri 1]
+tags: [Markdown, Tools, Blog]
 ---
 # I Love My Tools!
 Become one with your tools.  They could be more important than code, code, code.

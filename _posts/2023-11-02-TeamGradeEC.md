@@ -5,6 +5,7 @@ description: Reviewing 3 other teams from NATM.
 week: 11
 type: collab
 categories: [Personal, Tri 1]
+tags: [Blog]
 ---
 # PocketTherapist (Tanisha's Group)  - CSA P3
 USAGE OF:
