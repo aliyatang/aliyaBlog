@@ -5,7 +5,7 @@ description: An introduction to primitive types using input, output, and a gradi
 courses: {'csa': {'week': 4}}
 categories: ['AP Test Prep', 'Java', 'Tri 1']
 type: tangibles
-tags: ['Java', 'Data Types', 'AP Test Prep']
+tags: ['Notebook', 'Java', 'Data Types', 'AP Test Prep']
 ---
 
 ### Overview

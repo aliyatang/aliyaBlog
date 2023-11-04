@@ -1,5 +1,12 @@
 ---
-
+comments: True
+layout: post
+title: Unit 4 Iteration
+description: Lesson on the College Board Unit 4 Iteration
+week: 8
+type: ccc
+categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
+tags: ['Notebook', 'Lesson', 'Java', 'AP Test Prep', 'Iteration']
 ---
 
 # 4.2 - for Loops

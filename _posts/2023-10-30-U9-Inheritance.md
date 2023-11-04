@@ -5,7 +5,7 @@ description: Lesson on Java class hierarchy.
 type: ccc
 week: 11
 categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
-tags: ['Lesson', 'Java', 'Inheritance']
+tags: ['Notebook', 'Lesson', 'Java', 'Inheritance']
 ---
 
 ## 9.1 Superclasses and Subclasses

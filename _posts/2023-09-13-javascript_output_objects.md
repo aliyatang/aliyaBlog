@@ -5,7 +5,7 @@ layout: default
 courses: {'csa': {'week': 2}}
 type: tangibles
 categories: ['JavaScript', 'Tri 1']
-tags: ['JavaScript']
+tags: ['Notebook', 'JavaScript']
 ---
 
 ## JavaScript and Jupyter references

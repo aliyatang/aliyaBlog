@@ -4,7 +4,7 @@ description: A Tech Talk on outputs using HTML and Javascript. This uses jquery 
 courses: {'csa': {'week': 2}}
 categories: ['JavaScript', 'Tri 1']
 type: tangibles
-tags: ['JavaScript']
+tags: ['Notebook', 'JavaScript']
 ---
 
 ### Markdown Table

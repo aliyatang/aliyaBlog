@@ -6,7 +6,7 @@ description: Tech talk going over object oriented progamming in javascript
 type: tangibles
 courses: {'csa': {'week': 10}}
 categories: ['JavaScript', 'Tri 1']
-tags: ['JavaScript', 'OOP']
+tags: ['Notebook', 'JavaScript', 'OOP']
 ---
 
 # Javascript class
