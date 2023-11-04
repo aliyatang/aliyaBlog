@@ -70,11 +70,11 @@ Load all posts with site
   {%endcomment%}
 
     {% for post in posts %}
-      {% if post.courses[page.course] %}
+      {% if post.week %}
   {%comment%} 
   <!-- prepare data blog post data for evaluation -->
   {%endcomment%}
-        {% assign week = post.courses[page.course].week | tangibles: 0 %}
+        {% assign week = post.week | tangibles: 0 %}
         {% assign title = post.title | compact %}
         {% assign url = post.url | compact %}
   
