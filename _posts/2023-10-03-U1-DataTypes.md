@@ -6,7 +6,7 @@ title: Unit 1 Data Types
 description: Lesson on the College Board Unit 1 Data Types
 week: 7
 type: ccc
-categories: ['AP Test Prep', 'Java']
+categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
 ---
 
 Java is used around the world to create applications and is one of the most popular coding languages. The reason Java is so popular is because of it's security and versatility provided by it's Object Oriented nature.

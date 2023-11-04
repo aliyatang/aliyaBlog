@@ -6,11 +6,12 @@ title: Unit 9 Inheritance
 description: Lesson on Java class hierarchy.
 type: ccc
 week: 11
+categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
 authors: David, Alex, Drew, Derrick, Jishnu
 ---
 
 ## 9.1 Superclasses and Subclasses
-> hierarchy of classes is created, extending attributes into subclasses of information (ie. Automobile --> Trucks and Sedans --> Ford, BMW, Nissan, Toyota). 
+> A hierarchy of classes is created, extending attributes into subclasses of information (ie. Automobile --> Trucks and Sedans --> Ford, BMW, Nissan, Toyota). 
 
 ### Pre-Requisites
 

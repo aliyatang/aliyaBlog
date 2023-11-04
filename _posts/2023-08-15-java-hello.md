@@ -2,9 +2,9 @@
 layout: post
 title: Java Hello
 description: A progressive journey through Java basics starting with the classic "Hello, World!" example.
-courses: {csa: {week: 1}}
-type: hacks
-categories: [Java]
+courses: {'csa': {'week': 1}}
+categories: ['AP Test Prep', 'Java', 'Tri 1']
+type: tangibles
 ---
 
 ## Hello, World!
@@ -24,7 +24,7 @@ The key terms in HelloStatic introduction:
 
 
 
-```java
+```bash
 // Define Static Method within a Class
 public class HelloStatic {
     // Java standard runtime entry point
@@ -47,7 +47,7 @@ The key terms in HelloStatic introduction:
 - "getter" is a method that is used to extract or reference data from within the object. 
 
 
-```java
+```bash
 // Define Class with Constructor returning Object
 public class HelloObject {
     private String hello;   // instance attribute or variable
@@ -78,7 +78,7 @@ The key terms in HelloDynamic introduction:
 - "Java OOP, Java Classes/Objects, Java Class Attributes, Java Class Methods, Java Constructors" are explained if more complete detail in W3 Schools: https://www.w3schools.com/java/java_oop.asp
 
 
-```java
+```bash
 // Define Class
 public class HelloDynamic { // name the first letter of class as capitalized, note camel case
     // instance variable have access modifier (private is most common), data type, and name
@@ -133,7 +133,7 @@ Additional requirements (Pick something)
     - Calculate stats functions on an array of values: mean, median, mode.
 
 
-```java
+```bash
 public class Cat {
     // attributes of cat
     private String name;

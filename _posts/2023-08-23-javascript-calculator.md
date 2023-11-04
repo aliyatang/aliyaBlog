@@ -6,6 +6,7 @@ layout: default
 description: A common way to become familiar with a language is to build a calculator.  This calculator shows off button with actions.
 courses: { csa: {week: 2} }
 type: tangibles
+categories: [Games, Tri 1]
 ---
 
 <!-- 

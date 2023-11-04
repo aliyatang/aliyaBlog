@@ -6,6 +6,7 @@ title: Build a Project
 description: Continue learning the Development work flow for GitHub Pages index.md and _posts. Now is the time to build you first project.
 type: hacks
 courses: { csa: {week: 0} }
+categories: [Games, Tri 1]
 ---
 # Build a Project
 Continue learning the Development work flow for GitHub Pages index.md and _posts. Now is the time to build you first project.

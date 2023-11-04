@@ -2,7 +2,7 @@
 title: JS Output w/ jquery
 description: A Tech Talk on outputs using HTML and Javascript. This uses jquery for easy onscreen interaction and filtering.
 courses: {'csa': {'week': 2}}
-categories: ['JavaScript']
+categories: ['JavaScript', 'Tri 1']
 type: tangibles
 ---
 

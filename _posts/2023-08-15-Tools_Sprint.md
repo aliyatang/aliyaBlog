@@ -6,7 +6,7 @@ title: Tools Setup
 description: Become one with your tools.  They could be more important than code, code, code.
 type: hacks
 courses: { csa: {week: 0} }
-categories: [Tools]
+categories: [Tools, Tri 1]
 ---
 
 ### PBL Sprint 0 / Week 0

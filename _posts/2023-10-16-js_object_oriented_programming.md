@@ -5,7 +5,7 @@ title: Javascript Object Oriented Programming
 description: Tech talk going over object oriented progamming in javascript
 type: tangibles
 courses: {'csa': {'week': 10}}
-unit: 3
+categories: ['JavaScript', 'Tri 1']
 ---
 
 # Javascript class

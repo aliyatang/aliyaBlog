@@ -4,7 +4,7 @@ description: Quick launch into Variables, Functions, Arrays, Classes, Objects.
 layout: default
 courses: {'csa': {'week': 2}}
 type: tangibles
-categories: ['JavaScript']
+categories: ['JavaScript', 'Tri 1']
 ---
 
 ## JavaScript and Jupyter references

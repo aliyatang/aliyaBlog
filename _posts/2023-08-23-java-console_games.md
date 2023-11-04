@@ -1,9 +1,9 @@
 ---
-toc: true
 layout: post
 title: Console Games - RPS, Higher Lower, Tic-Tac-Toe
 description: Console games that show elements from College Board's Units
-courses: {csa: {week: 2}}
+courses: {'csa': {'week': 2}}
+categories: ['Games', 'Java', 'Tri 1']
 type: hacks
 ---
 
@@ -17,7 +17,7 @@ Console games that show elements from College Board's Units
 - Run the menu using recursion versus while loop.
 
 
-```Java
+```java
 import java.util.Random;
 import java.util.Scanner;
 
@@ -72,7 +72,7 @@ public class RPSGame {
 ```
 
 
-```Java
+```java
 RPSGame.main(null)
 ```
 
@@ -85,7 +85,7 @@ RPSGame.main(null)
 
 
 
-```Java
+```java
 import java.util.Random;
 import java.util.Scanner;
 
@@ -126,7 +126,7 @@ public class HigherLowerGame {
 ```
 
 
-```Java
+```java
 HigherLowerGame.main(null)
 ```
 
@@ -145,7 +145,7 @@ HigherLowerGame.main(null)
 
 
 
-```Java
+```java
 import java.util.Random;
 import java.util.Scanner;
 
@@ -272,7 +272,7 @@ public class TicTacToeGame {
 ```
 
 
-```Java
+```java
 TicTacToeGame.main(null)
 ```
 

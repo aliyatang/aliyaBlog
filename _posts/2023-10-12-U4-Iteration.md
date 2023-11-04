@@ -5,7 +5,7 @@ title: Unit 4 Iteration
 description: Lesson on the College Board Unit 4 Iteration
 week: 8
 type: ccc
-categories: ['AP Test Prep', 'Java']
+categories: ['AP Test Prep', 'Java', 'Lesson', 'Tri 1']
 ---
 
 # 4.2 - for Loops

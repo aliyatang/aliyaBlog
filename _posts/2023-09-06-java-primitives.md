@@ -3,7 +3,7 @@ layout: post
 title: U1 Primitive Data Types
 description: An introduction to primitive types using input, output, and a grading calculator example.
 courses: {'csa': {'week': 4}}
-categories: ['Java']
+categories: ['Java', 'Tri 1']
 type: tangibles
 ---
 
