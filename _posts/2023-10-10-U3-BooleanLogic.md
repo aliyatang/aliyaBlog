@@ -5,7 +5,7 @@ description: Lesson on boolean logics!
 courses: {csa: {week: 1}}
 type: lessons
 categories: [AP Test Prep, Java, Lesson, Tri 1]
-tags: [Lesson, Java, AP Test Prep, Boolean]
+tags: [Markdown, Lesson, Java, AP Test Prep, Boolean]
 ---
 
 # Data Tables!

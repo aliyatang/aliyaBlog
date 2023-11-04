@@ -5,7 +5,7 @@ description: A common way to become familiar with a language is to build a calcu
 courses: { csa: {week: 2} }
 type: tangibles
 categories: [Games, Tri 1]
-tags: [Games]
+tags: [Markdown, Games]
 ---
 
 <!-- 
