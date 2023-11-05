@@ -1,17 +1,10 @@
 ---
 layout: default
 ---
-
-{%comment%} 
-Setup course data
-    - Extract data by course
-    - Within course create units
-{%endcomment%}
-
-{% assign course = site.data[page.course] %} <!-- Load YML data -->
+<!-- Load YML data -->
+{% assign sprints = site.data.schedule.sprints %}
 {% assign units = page.units | split: ',' %}
 <h1>{{page.title}}</h1>
-<br>
 
 {%comment%} 
 Load all posts with site
@@ -25,10 +18,9 @@ Load all posts with site
 {%endcomment%}
 
 {% for unit in units %}
-{% assign unitKey = "Unit" | append: unit %}
-{% assign unitData = course[unitKey] %}
+{% assign unitData = sprints[unit] %}
 <h2>
-  {{ unitKey }}: {{ unitData.title }}
+  Sprint {{ unit }}: {{ unitData.title }}
 </h2>
 <p>  {{ unitData.description }} </p>
 
@@ -42,9 +34,9 @@ Load all posts with site
 <table>
   <tr>
     <th>Week</th>
-    <th>Plans</th>
-    <th>Hacks(Todo)</th>
-    <th>Tangibles</th>
+    <th>Code, Code, Code</th>
+    <th>Tools and DevOps</th>
+    <th>Collaboration</th>
   </tr>
 
   {%comment%} 
@@ -60,21 +52,20 @@ Load all posts with site
   {% assign deli = sym | compact %} 
 
   {% for index in (start..end) -%}
-    {% assign plans = null | compact %}
-    {% assign hacks = null | compact %}
-    {% assign tangibles = null | compact %}
+    {% assign ccc = null | compact %}
+    {% assign toolsdev = null | compact %}
+    {% assign collab = null | compact %}
 
 
   {%comment%} 
   <!-- looping through all posts -->
   {%endcomment%}
 
-    {% for post in posts %}
-      {% if post.week %}
+  {% for post in posts %}
   {%comment%} 
   <!-- prepare data blog post data for evaluation -->
   {%endcomment%}
-        {% assign week = post.week | tangibles: 0 %}
+        {% assign week = post.week | collab: 0 %}
         {% assign title = post.title | compact %}
         {% assign url = post.url | compact %}
   
@@ -86,28 +77,26 @@ Load all posts with site
   {%comment%} 
   <!-- organizing blogs by type -->
   {%endcomment%}
-          {% if post.type == "plans" %} 
-              {% assign plans = plans | unshift: title %}
-              {% assign plans = plans | unshift: url %}
-          {% elsif post.type == "hacks" %}
-              {% assign hacks = hacks | unshift: title %}
-              {% assign hacks = hacks | unshift: url %} 
-          {% elsif post.type == "tangibles" %}
-              {% assign tangibles = tangibles | unshift: title %}
-              {% assign tangibles = tangibles | unshift: url %} 
+          {% if post.type == "ccc" %} 
+              {% assign ccc = ccc | unshift: title %}
+              {% assign ccc = ccc | unshift: url %}
+          {% elsif post.type == "toolsdev" %}
+              {% assign toolsdev = toolsdev | unshift: title %}
+              {% assign toolsdev = toolsdev | unshift: url %} 
+          {% elsif post.type == "collab" %}
+              {% assign collab = collab | unshift: title %}
+              {% assign collab = collab | unshift: url %} 
           {% else %}
               {% assign uk = uk | unshift: title %}
               {% assign uk = uk | unshift: url %}     
           {% endif %}
-
-        {% endif %}
       {% endif %}
     {% endfor %}
 
   {%comment%} 
   <!-- ordering units and inserting column delimiters -->
   {%endcomment%}
-  {% assign units = units | concat:plans | concat:deli | concat:hacks | concat:deli | concat:tangibles  %}
+  {% assign units = units | concat:ccc | concat:deli | concat:toolsdev | concat:deli | concat:collab  %}
 
   {%comment%} 
   <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
