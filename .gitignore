@@ -19,5 +19,5 @@ package-lock.json
 .vscode
 
 # Misc
-assets/js/dist
+#assets/js/dist
 _posts/2022-07-08-PBL-FE-snake.md
