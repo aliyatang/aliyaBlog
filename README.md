@@ -1,7 +1,9 @@
 <div align="center">
 
 # Aliya Tang's APCSA Blog
-Link to Github Page: [** Click Here **][https://aliyatang.github.io/aliyaBlog/]
+Link to Github Page: https://aliyatang.github.io/aliyaBlog/
+
+
 
   # Chirpy Jekyll Theme
 
