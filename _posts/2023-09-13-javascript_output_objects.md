@@ -2,8 +2,8 @@
 title: JS Output w/ Objects
 description: Quick launch into Variables, Functions, Arrays, Classes, Objects.
 layout: default
-courses: {'csa': {'week': 2}}
-type: tangibles
+week: 2
+type: ccc
 categories: ['JavaScript', 'Tri 1']
 tags: ['Notebook', 'JavaScript']
 ---

@@ -4,7 +4,7 @@ layout: post
 title: Javascript Object Oriented Programming
 description: Tech talk going over object oriented progamming in javascript
 type: tangibles
-courses: {'csa': {'week': 10}}
+week: 11
 categories: ['JavaScript', 'Tri 1']
 tags: ['Notebook', 'JavaScript', 'OOP']
 ---

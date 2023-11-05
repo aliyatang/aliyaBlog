@@ -4,8 +4,8 @@ comments: true
 layout: post
 title: VSCode, Python, Jupyter, ...
 description: Tools and equipment setup for tools used throughout this class.
-courses: { csa: {week: 1} }
-type: hacks
+week: 0
+type: toolsdev
 categories: [Tools]
 tags: [Markdown, Tools]
 ---

@@ -2,7 +2,7 @@
 layout: post
 title: Java Hello
 description: A progressive journey through Java basics starting with the classic "Hello, World!" example.
-courses: {'csa': {'week': 1}}
+week: 1
 categories: ['AP Test Prep', 'Java', 'Tri 1']
 type: tangibles
 tags: ['Notebook', 'Java', 'AP Test Prep']

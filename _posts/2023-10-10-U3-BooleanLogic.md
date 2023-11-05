@@ -2,7 +2,7 @@
 layout: post
 title: Unit 3 Boolean Logic
 description: Lesson on boolean logics!
-courses: {csa: {week: 1}}
+week: 8
 type: lessons
 categories: [AP Test Prep, Java, Lesson, Tri 1]
 tags: [Markdown, Lesson, Java, AP Test Prep, Boolean]

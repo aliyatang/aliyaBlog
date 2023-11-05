@@ -2,9 +2,9 @@
 layout: post
 title: Console Games - RPS, Higher Lower, Tic-Tac-Toe
 description: Console games that show elements from College Board's Units
-courses: {'csa': {'week': 2}}
+week: 1
 categories: ['Games', 'Java', 'Tri 1']
-type: hacks
+type: ccc
 tags: ['Notebook', 'Games', 'Java']
 ---
 
