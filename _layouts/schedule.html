@@ -1,124 +1,119 @@
 ---
-layout: default
+layout: page
 ---
-<!-- Load YML data -->
-{% assign sprints = site.data.schedule.sprints %}
-{% assign units = page.units | split: ',' %}
-<h1>{{page.title}}</h1>
 
-{%comment%} 
-Load all posts with site
-{%endcomment%}
+{% include lang.html %}
+
+{% assign df_strftime_m = site.data.locales[lang].df.archives.strftime | default: '/ %m' %}
+{% assign df_dayjs_m = site.data.locales[lang].df.archives.dayjs | default: '/ MM' %}
+
+{% assign sprints = site.data.schedule.sprints %} <!-- Load data for each sprint -->
+{% assign units = page.units | split: ',' %} <!-- Load the units from the page -->
 
 {% assign posts = null | compact %}
 {% assign posts = posts | concat:site.posts | concat:site.pages %}
+<div id="" class="pl-xl-3">
 
-{%comment%} 
-<!-- Iterate through Course Units -->
-{%endcomment%}
-
-{% for unit in units %}
-{% assign unitData = sprints[unit] %}
-<h2>
-  Sprint {{ unit }}: {{ unitData.title }}
-</h2>
-<p>  {{ unitData.description }} </p>
-
-{% assign start = unitData.start %}
-{% assign end = unitData.end %}
-
-{%comment%} 
-<!-- Output Column Headings for Blogs -->
-{%endcomment%}
-
-<table>
-  <tr>
-    <th>Week</th>
-    <th>Code, Code, Code</th>
-    <th>Tools and DevOps</th>
-    <th>Collaboration</th>
-  </tr>
-
-  {%comment%} 
-  <!-- These loops group blogs according to Row (week) and Column (category) 
-    units = empty array
-    sym = value to be used as a separator
-    deli = sym forced to array
-  -->
-  {%endcomment%}
-
-  {% assign units = null | compact %}  
-  {% assign sym = "|||" %} 
-  {% assign deli = sym | compact %} 
-
-  {% for index in (start..end) -%}
-    {% assign ccc = null | compact %}
-    {% assign toolsdev = null | compact %}
-    {% assign collab = null | compact %}
-
-
-  {%comment%} 
-  <!-- looping through all posts -->
-  {%endcomment%}
-
-  {% for post in posts %}
-  {%comment%} 
-  <!-- prepare data blog post data for evaluation -->
-  {%endcomment%}
-        {% assign week = post.week | collab: 0 %}
-        {% assign title = post.title | compact %}
-        {% assign url = post.url | compact %}
+  {% for unit in units %}
+  {% assign unitData = sprints[unit] %}
+  <h2>SPRINT {{ unit }}: {{ unitData.title }}</h2>
+  <blockquote>  {{ unitData.description }} </blockquote>
+  
+  
+  
+  {% assign start = unitData.start %}
+  {% assign end = unitData.end %}
   
   {%comment%} 
-  <!-- process posts for current week -->
+  <!-- Output Column Headings for Blogs -->
   {%endcomment%}
-        {% if week == index %} 
+  <div class="table-wrapper">
+    <table style="width: 100%;">
+    <tr>
+      <th style="padding: 6.4px 16px;">Week</th>
+      <th style="padding: 6.4px 16px;">Code, Code, Code</th>
+      <th style="padding: 6.4px 16px;">Tools and DevOps</th>
+      <th style="padding: 6.4px 16px;">Collaboration</th>
+    </tr>
+  
+  
+    {% assign units = null | compact %}  
+    {% assign sym = "|||" %} 
+    {% assign deli = sym | compact %} 
+    {% for index in (start..end) -%}
+      {% assign ccc = null | compact %}
+      {% assign toolsdev = null | compact %}
+      {% assign collab = null | compact %}
 
-  {%comment%} 
-  <!-- organizing blogs by type -->
-  {%endcomment%}
-          {% if post.type == "ccc" %} 
-              {% assign ccc = ccc | unshift: title %}
-              {% assign ccc = ccc | unshift: url %}
-          {% elsif post.type == "toolsdev" %}
-              {% assign toolsdev = toolsdev | unshift: title %}
-              {% assign toolsdev = toolsdev | unshift: url %} 
-          {% elsif post.type == "collab" %}
-              {% assign collab = collab | unshift: title %}
-              {% assign collab = collab | unshift: url %} 
-          {% else %}
-              {% assign uk = uk | unshift: title %}
-              {% assign uk = uk | unshift: url %}     
+
+      {%comment%} 
+      <!-- looping through all posts -->
+      {%endcomment%}
+
+      {% for post in posts %}
+
+      {%comment%} 
+      <!-- prepare data blog post data for evaluation -->
+      {%endcomment%}
+          {% assign week = post.week | collab: 0 %}
+          {% assign title = post.title | compact %}
+          {% assign url = post.url | compact %}
+    
+      {%comment%} 
+      <!-- process posts for current week -->
+      {%endcomment%}
+          
+      {% if week == index %} 
+      {%comment%} 
+      <!-- organizing blogs by type -->
+      {%endcomment%}
+            {% if post.type == "ccc" %} 
+                {% assign ccc = ccc | unshift: title %}
+                {% assign ccc = ccc | unshift: url %}
+            {% elsif post.type == "toolsdev" %}
+                {% assign toolsdev = toolsdev | unshift: title %}
+                {% assign toolsdev = toolsdev | unshift: url %} 
+            {% elsif post.type == "collab" %}
+                {% assign collab = collab | unshift: title %}
+                {% assign collab = collab | unshift: url %} 
+            {% else %}
+                {% assign uk = uk | unshift: title %}
+                {% assign uk = uk | unshift: url %}     
+            {% endif %}
           {% endif %}
+
+
+      {% endfor %}
+
+    {%comment%} 
+    <!-- ordering units and inserting column delimiters -->
+    {%endcomment%}
+    {% assign units = units | concat:ccc | concat:deli | concat:toolsdev | concat:deli | concat:collab  %}
+
+    {%comment%} 
+    <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
+    {%endcomment%}
+    <tr>
+    <td> {{ index }} </td> 
+    <td>
+    {% for i in (0..units.size) -%} 
+      {% if units.size == 0 %}
+        {% break %}
+      {% elsif units[0] == sym %} <!-- make new column -->
+        </td>
+        <td>
+        {% assign units = units | shift %} <!-- remove delimiter -->
+      {% else %} <!-- make a link in the column -->
+        <a href="{{site.baseurl}}/{{units[0]}}" style="margin: 0;">{{units[1]}}</a> <br/> 
+        {% assign units = units | shift | shift %} <!-- remove title and url -->
       {% endif %}
     {% endfor %}
+    </td>
+    </tr>
+    {% endfor %}
+  </table>
+</div>
+    {% endfor %}
 
-  {%comment%} 
-  <!-- ordering units and inserting column delimiters -->
-  {%endcomment%}
-  {% assign units = units | concat:ccc | concat:deli | concat:toolsdev | concat:deli | concat:collab  %}
-
-  {%comment%} 
-  <!-- This Loop is maximum iterationss, since elements are pairs it will decrement a extra times at the end -->
-  {%endcomment%}
-  <tr>
-  <td> {{ index }} </td> 
-  <td>
-  {% for i in (0..units.size) -%} 
-    {% if units.size == 0 %}
-      {% break %}
-    {% elsif units[0] == sym %} <!-- make new column -->
-  </td>
-  <td>
-      {% assign units = units | shift %} <!-- remove delimiter -->
-    {% else %} <!-- make a link in the column -->
-      - <a href="{{site.baseurl}}/{{units[0]}}">{{units[1]}}</a> <br/> 
-      {% assign units = units | shift | shift %} <!-- remove title and url -->
-    {% endif %}
-  {% endfor %}
-  </td>
-  </tr>
-  {% endfor %}
-
-</table>
-{% endfor %}
+  
+</div>

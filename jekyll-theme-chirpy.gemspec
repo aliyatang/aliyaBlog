@@ -2,16 +2,16 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "jekyll-theme-chirpy"
-  spec.version       = "6.2.3"
+  spec.version       = "6.1.0"
   spec.authors       = ["Cotes Chung"]
   spec.email         = ["cotes.chung@gmail.com"]
 
-  spec.summary       = "A minimal, responsive, and feature-rich Jekyll theme for technical writing."
+  spec.summary       = "A minimal, responsive and feature-rich Jekyll theme for technical writing."
   spec.homepage      = "https://github.com/cotes2020/jekyll-theme-chirpy"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").select { |f|
-    f.match(%r!^((_(includes|layouts|sass|(data\/(locales|origin)))|assets)\/|README|LICENSE)!i)
+    f.match(%r!^((_(includes|layouts|sass|data)|assets)\/|README|LICENSE)!i)
   }
 
   spec.metadata = {
