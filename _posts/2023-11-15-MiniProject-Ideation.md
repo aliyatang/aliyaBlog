@@ -34,7 +34,7 @@ tags: [Markdown, Blog, Project]
 - We plan on using Selection Sort for this. In the context of showcasing artists, Selection Sort can be used to select the artist with the desired criterion and place them in the appropriate position. This process is then repeated for the remaining artists. Selection Sort is straightforward and can be suitable for smaller artist showcases, providing a clear and organized display for visitors.
 - Can utilize the same API as feature 1 but with more columns of data or use a new API focused on the artist info. Go though the data base, find the largest number (years, age), and order in descending order based on that.
 - ![selectionsort](/assets/img/selectionsort.png){: img width="450" height="600" alt="selectionsort" }
-![feature2design](/assets/img/feature2design.png){: img width="550" height="450" alt="feature2design"}
+![feature2design](/assets/img/feature2diagram.png){: img width="550" height="450" alt="feature2design"}
 
 ### Feature 3: Fibonacci Art
 - this feature will incorporate the Fibonacci requirement of the project. Users will input a number which will be the "nth" value of the fibonacci sequence. We will create 4 Fibonacci algorithms using teacher code as a guide as well as inheritance in Java. The user will be able to visualize artwork being created by the 4 different fibonacci types on the frontend. We also will show the time it took to create each artwork based on the type of fibonacci algorithm used.
