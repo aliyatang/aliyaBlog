@@ -4,7 +4,7 @@ description: A Tech Talk on outputs using HTML and Javascript. This uses jquery 
 week: 2
 categories: ['JavaScript', 'Tri 1']
 type: ccc
-tags: ['Notebook', 'JavaScript']
+tags: ['Notebook', 'JavaScript', 'jQuery']
 ---
 
 ### Markdown Table
