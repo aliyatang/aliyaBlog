@@ -142,12 +142,6 @@ function createBarbieCharacter() {
 
 $('#create-btn').on('click', createBarbieCharacter);
 
-$('#data-table').on('click', '.delete-btn', function() {
-  const idToDelete = $(this).data('id');
-  const newData = initialData.filter(item => item.id !== idToDelete);
-  renderData(newData);
-});
-
 $('#data-table').on('click', '.update-btn', function() {
   const idToEdit = $(this).data('id');
   const updateIndex = initialData.findIndex(item => item.id === idToEdit);
@@ -172,6 +166,7 @@ $('#data-table').on('click', '.update-btn', function() {
     alert('Character not found.');
   }
 });
+
 // Initial rendering
 renderData(initialData);
 </script>
