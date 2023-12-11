@@ -104,77 +104,74 @@ We use jQuery with CRUD because it makes it easy to perform the create read upda
 <button id="create-btn">Create Barbie Character</button>
 
 <script>
-  const initialData = [
-    { id: 1, name: 'Barbie', email: 'barbie@example.com' },
-    { id: 2, name: 'Ken', email: 'ken@example.com' }
-  ];
+const initialData = [
+  { id: 1, name: 'Barbie', email: 'barbie@example.com' },
+  { id: 2, name: 'Ken', email: 'ken@example.com' }
+];
 
-  function renderData(data) {
-    const tableBody = $('#data-table tbody');
-    tableBody.empty();
+function renderData(data) {
+  const tableBody = $('#data-table tbody');
+  tableBody.empty();
 
-    data.forEach(item => {
-      const row = `
-        <tr>
-          <td>${item.id}</td>
-          <td>${item.name}</td>
-          <td>${item.email}</td>
-          <td>
-            <button class="update-btn" data-id="${item.id}">Update</button>
-            <button class="delete-btn" data-id="${item.id}">Delete</button>
-          </td>
-        </tr>
-      `;
-      tableBody.append(row);
-    });
-  }
+  data.forEach(item => {
+    const row = `
+      <tr>
+        <td>${item.id}</td>
+        <td>${item.name}</td>
+        <td>${item.email}</td>
+        <td>
+          <button class="update-btn" data-id="${item.id}">Update</button>
+          <button class="delete-btn" data-id="${item.id}">Delete</button>
+        </td>
+      </tr>
+    `;
+    tableBody.append(row);
+  });
+}
 
-  function createBarbieCharacter() {
-    const newName = prompt('Enter the name of the Barbie character:');
-    const newEmail = prompt('Enter the email of the Barbie character:');
-    const newId = initialData.length + 1;
+function createBarbieCharacter() {
+  const newName = prompt('Enter the name of the Barbie character:');
+  const newEmail = prompt('Enter the email of the Barbie character:');
+  const newId = initialData.length + 1;
+  
+  const newData = [...initialData, { id: newId, name: newName, email: newEmail }];
+  initialData.push({ id: newId, name: newName, email: newEmail });
+
+  renderData(newData);
+}
+
+$('#create-btn').on('click', createBarbieCharacter);
+
+$('#data-table').on('click', '.delete-btn', function() {
+  const idToDelete = $(this).data('id');
+  const newData = initialData.filter(item => item.id !== idToDelete);
+  renderData(newData);
+});
+
+$('#data-table').on('click', '.update-btn', function() {
+  const idToEdit = $(this).data('id');
+  const updateIndex = initialData.findIndex(item => item.id === idToEdit);
+
+  // check user index exist
+  if (updateIndex !== -1) {
+    // new name and email input
+    const updatedName = prompt('Enter the new name of the Barbie character:', initialData[updateIndex].name);
+    const updatedEmail = prompt('Enter the new email of the Barbie character:', initialData[updateIndex].email);
     
-    const newData = [...initialData, { id: newId, name: newName, email: newEmail }];
-    initialData.push({ id: newId, name: newName, email: newEmail });
+    // provided name and email valid
+    if (updatedName !== null && updatedEmail !== null) {
+      // Update initialData array
+      initialData[updateIndex].name = updatedName;
+      initialData[updateIndex].email = updatedEmail;
 
-    renderData(newData);
-  }
-
-  $('#create-btn').on('click', createBarbieCharacter);
-
-  $('#data-table').on('click', '.delete-btn', function() {
-    const idToDelete = $(this).data('id');
-    const newData = initialData.filter(item => item.id !== idToDelete);
-    renderData(newData);
-  });
-
-  $('#data-table').on('click', '.update-btn', function () {
-    const idToEdit = $(this).data('id');
-    const updateIndex = initialData.findIndex(item => item.id === idToEdit);
-
-    // Check if index exists
-    if (updateIndex !== -1) {
-      // Prompt the user for new name and email
-      const updatedName = prompt('Enter the new name of the Barbie character:', initialData[updateIndex].name);
-      const updatedEmail = prompt('Enter the new email of the Barbie character:', initialData[updateIndex].email);
-
-      // Check if the user provided values
-      if (updatedName !== null && updatedEmail !== null) {
-        // Update initialData array
-        initialData[updateIndex].name = updatedName;
-        initialData[updateIndex].email = updatedEmail;
-
-        // Render the updated data
-        renderData(initialData);
-      } else {
-        alert('Update canceled. Please provide both name and email.');
-      }
+      renderData(initialData);
     } else {
-      alert('Character not found.');
+      alert('Please provide both name and email.');
     }
-  });
-
-  // Initial rendering
-  renderData(initialData);
+  } else {
+    alert('Character not found.');
+  }
+});
+// Initial rendering
+renderData(initialData);
 </script>
-
