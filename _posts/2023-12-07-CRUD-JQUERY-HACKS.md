@@ -46,7 +46,7 @@ Javascript library that simplifies HTML document manipulation, AJAX, web develop
   });
 
 5. Why do we use JQUERY with CRUD?
-We use jQuery with CRUD because it makes it easy to perform the create read update delete operations on data without having to write a lot of code.
+We use jQuery with CRUD because it makes it easy to perform the create read update delete operations on dawithout having to write a lot of code, can connect the frontend jQuery with backend CRUD easily
 
 # Finish the update JQUERY function
 - its all the way at the end, you should see the green comment
@@ -165,6 +165,12 @@ $('#data-table').on('click', '.update-btn', function() {
   } else {
     alert('Character not found.');
   }
+});
+
+$('#data-table').on('click', '.delete-btn', function() {
+  const idToDelete = $(this).data('id');
+  const newData = initialData.filter(item => item.id !== idToDelete);
+  renderData(newData);
 });
 
 // Initial rendering

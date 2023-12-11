@@ -78,7 +78,7 @@ aside[role="complementary"]
 
 In the design phase of any project, maintaining uniformity is extremely important for creating a polished look. SASS allows for this by allowing the use of variables to store and reuse colors, fonts, and other design elements.
 
-This makes it so that there is a common theme applied throughout the entire project. SASS allows for visual cohesion.
+This makes it so that there is a consistent theme applied throughout the entire project. SASS allows for visual cohesion.
 
 <h2>Visual Concept as a Blueprint</h2>
 
@@ -91,6 +91,17 @@ These visual concepts also play a role in planning the responsive design. The te
 <h1>Hacks</h1>
 
 **Explore SASS documentation to discover any additional features not covered in the lesson and implement one or more of these features in your GH Pages project. Write a couple sentences explaining the feature and demonstrate it.**
+- Key Frames allow for animations by specifying different styles at different points/frames in the animation. For example a fade in aniamtion can be defined using @keyframes:
+```
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+```
 
 ## Partials and Modular Styling with SASS
 
@@ -425,6 +436,63 @@ $padding: 10px
 
 Create a grid layout that automatically adjusts the number of columns based on the screen size, using SASS variables and functions.
 
+
+```java
+$small-screen: 576px;
+$medium-screen: 768px;
+$large-screen: 992px;
+$x-large-screen: 1200px;
+
+// calcute column width as percentage
+@function calculate-column-width($columns, $max-columns: 12) {
+  @return percentage($columns / $max-columns);
+}
+
+// repsonsive grid mixin
+@mixin responsive-grid($max-columns: 12, $column-width: 100px) {
+  $container-width: $max-columns * $column-width;
+
+  @for $i from 1 through $max-columns {
+    $width: $i * $column-width;
+
+    // media query for each col width
+    @media (min-width: #{$width}) {
+      .col-#{$i} {
+        width: calculate-column-width($i);
+        max-width: $column-width;
+      }
+    }
+  }
+}
+
+// styles
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(1, 1fr);
+
+  @include responsive-grid(2, 80px) {
+    @media (min-width: $medium-screen) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: $large-screen) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @media (min-width: $x-large-screen) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+}
+
+.grid-item {
+  border: 1px solid #333;
+  padding: 20px;
+  text-align: center;
+}
+```
+
 # Scripting in SASS
 
 ## SASS Scripting
@@ -598,6 +666,53 @@ Define a custom SASS function that uses a for loop in order to slightly decrease
 ![pixil-frame-0 (1)](https://github.com/Ant11234/student/assets/40652645/509214d6-bf1a-40f7-9028-cfd4b9f212da)
 
 
+```java
+@function adjust-color($base-color, $iterations: 3) {
+  $adjusted-colors: ();
+
+  @for $i from 1 through $iterations {
+    // calculate adjusted color
+    $adjusted-color: adjust-hue($base-color, -10% * $i);
+    $adjusted-color: lighten($adjusted-color, 10% * $i);
+
+    // add adjusted color to the list
+    $adjusted-colors: append($adjusted-colors, $adjusted-color);
+  }
+
+  @return $adjusted-colors;
+}
+
+// colors
+$base-color: #3498db;
+
+// create a 3x3 array of colors with decreasing saturation and increasing brightness
+$color-array: ();
+@for $row from 1 through 3 {
+  $row-colors: ();
+  @for $col from 1 through 3 {
+    // adjust the base color for each cell
+    $adjusted-colors: adjust-color($base-color, $row + $col);
+    $row-colors: join($row-colors, $adjusted-colors, space);
+  }
+  // add the row to the array
+  $color-array: append($color-array, $row-colors);
+}
+
+// output the array
+@each $row in $color-array {
+  @each $cell in $row {
+    .color-cell {
+      background-color: $cell;
+      // additional styling for the color cells
+      width: 50px;
+      height: 50px;
+      margin: 5px;
+      display: inline-block;
+    }
+  }
+}
+
+```
 
 # Extending & Inheritance
 
@@ -718,6 +833,66 @@ Define a custom SASS function that uses a for loop in order to slightly decrease
 ### Example Image
 
 ![pixil-frame-0 (1)](https://github.com/Ant11234/student/assets/40652645/509214d6-bf1a-40f7-9028-cfd4b9f212da)
+
+
+```java
+%%html
+// Custom SASS function to adjust saturation and brightness
+@function adjustColor($color, $iterations: 3) {
+    $adjusted-color: $color;
+    @for $i from 1 through $iterations {
+      // Decrease saturation
+      $adjusted-color: darken(saturate($adjusted-color, 5%), 5%);
+      // Increase brightness
+      $adjusted-color: lighten($adjusted-color, 10%);
+    }
+    @return $adjusted-color;
+  }
+  
+  // Colors
+  $base-color: #3498db; // Your chosen color
+  
+  // Create a 3x3 array of colors with decreasing saturation and increasing brightness
+  $array: ();
+  @for $row from 1 through 3 {
+    $row-colors: ();
+    @for $col from 1 through 3 {
+      // Adjust the base color for each cell
+      $adjusted-color: adjustColor($base-color, $row + $col);
+      // Add the adjusted color to the row
+      $row-colors: append($row-colors, $adjusted-color);
+    }
+    // Add the row to the array
+    $array: append($array, $row-colors);
+  }
+  
+  // Output the array
+  @each $row in $array {
+    @each $cell in $row {
+      .color-cell {
+        background-color: $cell;
+        // Additional styling for the color cells
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+        display: inline-block;
+      }
+    }
+  }
+  
+```
+
+
+    ---------------------------------------------------------------------------
+
+    io.github.spencerpark.jupyter.kernel.magic.registry.UndefinedMagicException: Undefined cell magic 'html'
+
+    	at io.github.spencerpark.jupyter.kernel.magic.registry.Magics.applyCellMagic(Magics.java:34)
+
+    	at io.github.spencerpark.ijava.runtime.Magics.cellMagic(Magics.java:31)
+
+    	at .(#12:1)
+
 
 # Mixins
 
