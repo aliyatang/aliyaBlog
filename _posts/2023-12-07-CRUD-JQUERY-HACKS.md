@@ -3,7 +3,7 @@ layout: post
 title: JQUERY & CRUD HACKS
 description: hacks for CRUD with JQUERY
 type: ccc
-week: 11
+week: 15
 categories: ['Javascript', 'Lesson', 'Tri 2']
 tags: ['Notebook', 'Lesson', 'Javascript', 'jQuery']
 ---
@@ -135,6 +135,8 @@ We use jQuery with CRUD because it makes it easy to perform the create read upda
     const newId = initialData.length + 1;
     
     const newData = [...initialData, { id: newId, name: newName, email: newEmail }];
+    initialData.push({ id: newId, name: newName, email: newEmail });
+
     renderData(newData);
   }
 
@@ -146,21 +148,29 @@ We use jQuery with CRUD because it makes it easy to perform the create read upda
     renderData(newData);
   });
 
-  $('#data-table').on('click', '.update-btn', function() {
+  $('#data-table').on('click', '.update-btn', function () {
     const idToEdit = $(this).data('id');
     const updateIndex = initialData.findIndex(item => item.id === idToEdit);
 
-    // updated values
-    const newName = prompt('Enter the name of the Barbie character:');
-    const newEmail = prompt('Enter the email of the Barbie character:');
-
-    // check if index exits
+    // Check if index exists
     if (updateIndex !== -1) {
-      initialData[updateIndex].name = newName;
-      initialData[updateIndex].email = newEmail;
+      // Prompt the user for new name and email
+      const updatedName = prompt('Enter the new name of the Barbie character:', initialData[updateIndex].name);
+      const updatedEmail = prompt('Enter the new email of the Barbie character:', initialData[updateIndex].email);
 
-      // rerender
-      renderData(initalData);
+      // Check if the user provided values
+      if (updatedName !== null && updatedEmail !== null) {
+        // Update initialData array
+        initialData[updateIndex].name = updatedName;
+        initialData[updateIndex].email = updatedEmail;
+
+        // Render the updated data
+        renderData(initialData);
+      } else {
+        alert('Update canceled. Please provide both name and email.');
+      }
+    } else {
+      alert('Character not found.');
     }
   });
 
@@ -168,115 +178,3 @@ We use jQuery with CRUD because it makes it easy to perform the create read upda
   renderData(initialData);
 </script>
 
-
-
-```java
-<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-<style>
-  body {
-    background-color: #ffe1f4; /* Barbie Pink */
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    margin-top: 20px;
-  }
-  th, td {
-    border: 1px solid #e66b8f; /* Barbie Pink */
-    padding: 10px;
-    text-align: left;
-  }
-  th {
-    background-color: #ff8bbd; /* Barbie Pink */
-    color: white;
-  }
-  button {
-    background-color: #ff8bbd; /* Barbie Pink */
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    cursor: pointer;
-  }
-  button:hover {
-    background-color: #e66b8f; /* Lighter Barbie Pink */
-  }
-</style>
-
-
-<table id="data-table">
-  <thead>
-    <tr>
-      <th>ID</th>
-      <th>Name</th>
-      <th>Email</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <!-- Data will be dynamically added here -->
-  </tbody>
-</table>
-
-<button id="create-btn">Create Barbie Character</button>
-
-<script>
-  const initialData = [
-    { id: 1, name: 'Barbie', email: 'barbie@example.com' },
-    { id: 2, name: 'Ken', email: 'ken@example.com' }
-  ];
-
-  function renderData(data) {
-    const tableBody = $('#data-table tbody');
-    tableBody.empty();
-
-    data.forEach(item => {
-      const row = `
-        <tr>
-          <td>${item.id}</td>
-          <td>${item.name}</td>
-          <td>${item.email}</td>
-          <td>
-            <button class="update-btn" data-id="${item.id}">Update</button>
-            <button class="delete-btn" data-id="${item.id}">Delete</button>
-          </td>
-        </tr>
-      `;
-      tableBody.append(row);
-    });
-  }
-
-  function createBarbieCharacter() {
-    const newName = prompt('Enter the name of the Barbie character:');
-    const newEmail = prompt('Enter the email of the Barbie character:');
-    const newId = initialData.length + 1;
-    
-    const newData = [...initialData, { id: newId, name: newName, email: newEmail }];
-    renderData(newData);
-  }
-
-  $('#create-btn').on('click', createBarbieCharacter);
-
-  $('#data-table').on('click', '.delete-btn', function() {
-    const idToDelete = $(this).data('id');
-    const newData = initialData.filter(item => item.id !== idToDelete);
-    renderData(newData);
-  });
-
-  $('#data-table').on('click', '.update-btn', function() {
-    const idToEdit = $(this).data('id');
-    const updateIndex = initialData.findIndex(item => item.id === idToEdit);
-
-    const updateName = initalData.
-    const updatedData = [...updateIndex, { id: updateId, name: updateName, email: updateEmail }];
-    renderData(updatedData);
-  });
-
-
-  // Initial rendering
-  renderData(initialData);
-</script>
-
-```
