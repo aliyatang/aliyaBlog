@@ -493,6 +493,36 @@ $x-large-screen: 1200px;
 }
 ```
 
+
+    |   $small-screen: 576px;
+
+    ';' expected
+
+    
+
+    |   $small-screen: 576px;
+
+    not a statement
+
+    
+
+    |   $small-screen: 576px;
+
+    cannot find symbol
+
+      symbol:   variable $small
+
+    
+
+    |   $small-screen: 576px;
+
+    cannot find symbol
+
+      symbol:   variable screen
+
+    
+
+
 # Scripting in SASS
 
 ## SASS Scripting
@@ -822,9 +852,11 @@ In this example, the @debug statement will print a message to the console during
 ## Popcorn Hacks
 ### Popcorn Hack 1:
 Try changing the primary color to an invalid value (e.g., 'red') and observe the @error message. Then, correct it to a valid color.
+- Invalid color "red" text, change to hex code color
 
 ### Popcorn Hack 2:
 Modify the base font size and observe the @debug message. Try different font sizes and see how it affects the calculated line height.
+- The debug message indicates what size base font it is debugging. Increasing font size increases the calculated line height.
 
 # Hacks
 
@@ -833,66 +865,6 @@ Define a custom SASS function that uses a for loop in order to slightly decrease
 ### Example Image
 
 ![pixil-frame-0 (1)](https://github.com/Ant11234/student/assets/40652645/509214d6-bf1a-40f7-9028-cfd4b9f212da)
-
-
-```java
-%%html
-// Custom SASS function to adjust saturation and brightness
-@function adjustColor($color, $iterations: 3) {
-    $adjusted-color: $color;
-    @for $i from 1 through $iterations {
-      // Decrease saturation
-      $adjusted-color: darken(saturate($adjusted-color, 5%), 5%);
-      // Increase brightness
-      $adjusted-color: lighten($adjusted-color, 10%);
-    }
-    @return $adjusted-color;
-  }
-  
-  // Colors
-  $base-color: #3498db; // Your chosen color
-  
-  // Create a 3x3 array of colors with decreasing saturation and increasing brightness
-  $array: ();
-  @for $row from 1 through 3 {
-    $row-colors: ();
-    @for $col from 1 through 3 {
-      // Adjust the base color for each cell
-      $adjusted-color: adjustColor($base-color, $row + $col);
-      // Add the adjusted color to the row
-      $row-colors: append($row-colors, $adjusted-color);
-    }
-    // Add the row to the array
-    $array: append($array, $row-colors);
-  }
-  
-  // Output the array
-  @each $row in $array {
-    @each $cell in $row {
-      .color-cell {
-        background-color: $cell;
-        // Additional styling for the color cells
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-        display: inline-block;
-      }
-    }
-  }
-  
-```
-
-
-    ---------------------------------------------------------------------------
-
-    io.github.spencerpark.jupyter.kernel.magic.registry.UndefinedMagicException: Undefined cell magic 'html'
-
-    	at io.github.spencerpark.jupyter.kernel.magic.registry.Magics.applyCellMagic(Magics.java:34)
-
-    	at io.github.spencerpark.ijava.runtime.Magics.cellMagic(Magics.java:31)
-
-    	at .(#12:1)
-
 
 # Mixins
 
