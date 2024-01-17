@@ -2,9 +2,9 @@
 layout: base
 title: Login Lesson
 description: SASS + JavaScript Login/Signup pages
-author: Finn C, Theo H, Justin N
 permalink: lesson
 type: ccc
+week: 18
 categories: ['Lesson', 'Tri 2']
 tags: ['Notebook', 'Lesson', 'Java']
 ---
