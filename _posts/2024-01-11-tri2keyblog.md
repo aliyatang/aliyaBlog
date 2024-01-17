@@ -2,7 +2,7 @@
 layout: post
 title: Key Assets and Projects
 description: Blog check in for trimester 2
-week: 11
+week: 17
 type: collab
 categories: [AP Test Prep, Java, Tri 2]
 tags: [Markdown, Blog]
