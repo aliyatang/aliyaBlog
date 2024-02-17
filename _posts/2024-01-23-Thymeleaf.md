@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post
 title: Thymeleaf Lesson
 type: ccc
 week: 19

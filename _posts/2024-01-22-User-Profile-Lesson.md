@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post
 title: User Profile JavaScript/HTML Lesson
 description: HTML and Javascript of User Profiles
 type: ccc

@@ -1,5 +1,5 @@
 ---
-layout: base
+layout: post
 title: Login Lesson
 description: SASS + JavaScript Login/Signup pages
 permalink: lesson
