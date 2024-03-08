@@ -56,5 +56,5 @@ Our team worked together outside of classtime by calling, screensharing on call,
 - Helped Vivian @ Panera to set up leaderboard [Link](https://github.com/GAVE-CSA/GAVE-backend-v3/pull/6)
 
 ## Analytics
-- [Overall](https://github.com/aliyatang?tab=overview&from=2024-03-01&to=2024-03-08)
-- [Frontend](https://github.com/GAVE-CSA/GAVE-frontend/graphs/contributors)
+- [Overall Analytics](https://github.com/aliyatang?tab=overview&from=2024-03-01&to=2024-03-08)
+- [GAVE Analytics](https://github.com/GAVE-CSA/GAVE-frontend/graphs/contributors)
