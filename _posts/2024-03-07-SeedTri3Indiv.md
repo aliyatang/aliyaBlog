@@ -7,15 +7,12 @@ type: collab
 categories: [Tri 3]
 tags: [Markdown, Blog, Seed]
 ---
-# Trimester 3 Individual Seed
 ## AP Prep
-| Item      | Link                                                          |
-|-----------|---------------------------------------------------------------|
-| FRQ 1     | [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq1/) |
-| FRQ 2     | [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq2/) |
-| FRQ 3     | [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq3/) |
-| FRQ 4     | [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq4/) |
-| PBL Issue | [Link](https://github.com/aliyatang/Aliya/issues/41)          |
+- FRQ 1 [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq1/)
+- FRQ 2 [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq2/)
+- FRQ 3 [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq3/)
+- FRQ 4 [Link](https://aliyatang.github.io/aliyaBlog/posts/2015frq4/)
+- PBL Issue [Link](https://github.com/aliyatang/Aliya/issues/41)
 
 ## Key Github Commits
 - Password game base code [Link](https://github.com/GAVE-CSA/GAVE-frontend/commit/a2a90edba3205a23db11191c725c04100f27335e)
