@@ -8,6 +8,14 @@ tags: ['Notebook', 'FRQ', 'Java', 'Sort']
 ---
 
 # Comparable and compareTo
+Comparing "Person" objects based on numeric "rating" with the compareTo method:
+
+- comparing this.rating and other.rating: result of this.rating - other.rating is negative, positive, or 0. 
+- negative indicates that "this" comes before "other" when sorted
+- positive indicates that "other" comes before "this" when sorted
+- equal indicates they are equal in terms of sorting
+
+With compareTo, "Person" objects can be automatically sorted with any of the standard sorting algorithms that use comparisions 
 
 
 ```java
