@@ -29,6 +29,8 @@ Links:
 - Performance: 4/3 8:30 AM Wednesday
 - Explained what we are trying to show before start actual performance (Tanisha introduce bachelor idea)
 - Artistic impression & algorithmic accuracy > 10/10/10/10/10, #1 Algorithmic Performance 
+![img](/assets/img/algopic4.png)
+
 
 ## Other Dances
 - Merge (Flowers - good dancing aspect of flowers, could explain how merging back together works)
