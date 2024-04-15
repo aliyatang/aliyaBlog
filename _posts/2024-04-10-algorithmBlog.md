@@ -31,4 +31,7 @@ Links:
 - Artistic impression & algorithmic accuracy > 10/10/10/10/10, #1 Algorithmic Performance 
 
 ## Other Dances
-- Merge, Insertion, Selection
+- Merge (Flowers - good dancing aspect of flowers, could explain how merging back together works)
+- Insertion (Apple Juice - funny)
+- Selection (Beach - some confusion with sorting... but pulled it off, a bit confusing)
+- Quick (Murder Mystery - very intersting story, well planned out. hard to see numbers)
