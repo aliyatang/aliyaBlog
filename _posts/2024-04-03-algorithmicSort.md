@@ -17,11 +17,14 @@ Comparing "Person" objects based on numeric "rating" with the compareTo method:
 
 With compareTo, "Person" objects can be automatically sorted with any of the standard sorting algorithms that use comparisions 
 
+Comparable interface, for objects of same type - defines the compareTo method, to compare current objects with another objects of same type. 
+
 
 ```java
 import java.util.ArrayList;
 import java.util.Collections;
 
+// Person class impelements Comparable
 public class Person implements Comparable<Person>{
     private String name;
     private int rating;
