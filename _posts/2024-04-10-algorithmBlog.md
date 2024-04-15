@@ -1,0 +1,34 @@
+---
+layout: post
+title: Algorithm Dance Blog
+description: Algorithm Dance Blog
+week: 26
+type: collab
+categories: [Personal, Tri 3]
+tags: [Markdown, Blog]
+---
+## Preparation
+- Diversity: 7 girls 6 boys
+- 3 full team practices (2 Panera meet up to write/finalize script, 1 Lunch Practice)
+![img](https://private-user-images.githubusercontent.com/104966589/318508423-cf049b56-ae9d-4cdb-89b2-5a2042439a34.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTMyMDU5MzcsIm5iZiI6MTcxMzIwNTYzNywicGF0aCI6Ii8xMDQ5NjY1ODkvMzE4NTA4NDIzLWNmMDQ5YjU2LWFlOWQtNGNkYi04OWIyLTVhMjA0MjQzOWEzNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxNVQxODI3MTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05Y2ZkMWFkMzRkNGZkMzVlNzg4ODQ0ZDhhOGUzOWNhMDdkNzE2ODI5NzhiOTBhMDQ4YzM3ZGY0NjBmYWQ2NDE1JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.d9PDQwWfdJ8FbeZOhgA8bQXmbz0hopuHnNo2zMUss4k)
+![img](https://private-user-images.githubusercontent.com/111661543/319309794-2754b581-4dbe-472b-a7aa-66977985b948.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTMyMDU5MzcsIm5iZiI6MTcxMzIwNTYzNywicGF0aCI6Ii8xMTE2NjE1NDMvMzE5MzA5Nzk0LTI3NTRiNTgxLTRkYmUtNDcyYi1hN2FhLTY2OTc3OTg1Yjk0OC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxNVQxODI3MTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT1iYWUyZTYzODE5MzUzMWM2MjA5ZTE1NjU2N2M4MDMyMmFiNDkyOWUwZjIyZWYwMzBlYmZkZDk5MzU0NGMxYmViJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.QTueSWww8HXtAcG-0Z4FrkgpjSL2TQHYILPLeLbEQKI)
+
+## Diagram
+![img](https://private-user-images.githubusercontent.com/104966589/319669700-d82790f7-a1b3-40d8-9317-b098fb8b37fe.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTMyMDU5MzcsIm5iZiI6MTcxMzIwNTYzNywicGF0aCI6Ii8xMDQ5NjY1ODkvMzE5NjY5NzAwLWQ4Mjc5MGY3LWExYjMtNDBkOC05MzE3LWIwOThmYjhiMzdmZS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNDE1JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDQxNVQxODI3MTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT03MjhmMTM5NTIyMmU5YzEzNjlmNTMzYTA1M2UwNzg3YzNiODllZjEwMmU4OTE4OGNjMmVjMmE5MjkwM2E4NGZiJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.vOwKAQ7L7nDodaGnjiqIANI89lTjiGuHp3K7SrYrMEc)
+
+## Advertising/Publishing
+- Email: codemaxxers@gmail.com
+- YouTube: codemaxxers (post wednesday performance)
+- Tiktok: codemaxxers7 (viral tiktok trends to advertise)
+
+Links:
+- [Theo Thirst Trap](https://www.tiktok.com/t/ZTLkLeKQd/)
+- [Why Did This Dance Go Viral](https://www.tiktok.com/t/ZTLknNKYP/)
+
+## Overview
+- Performance: 4/3 8:30 AM Wednesday
+- Explained what we are trying to show before start actual performance (Tanisha introduce bachelor idea)
+- Artistic impression & algorithmic accuracy > 10/10/10/10/10, #1 Algorithmic Performance 
+
+## Other Dances
+- Merge, Insertion, Selection
