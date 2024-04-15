@@ -1,0 +1,477 @@
+---
+layout: post
+title: Algorithmic Sort
+type: ccc
+week: 26
+categories: ['AP Test Prep', 'Java', 'Tri 3']
+tags: ['Notebook', 'FRQ', 'Java', 'Sort']
+---
+
+# Comparable and compareTo
+
+
+```java
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class Person implements Comparable<Person>{
+    private String name;
+    private int rating;
+
+    public Person(String name, int rating){
+        this.name = name;
+        this.rating = rating;
+    }
+
+    //getters
+    public String getName(){
+        return name;
+    }
+
+    public int getRating (){
+        return rating;
+    }
+
+    // compareTo method
+    @Override
+    public int compareTo(Person other) {
+        return Integer.compare(this.rating, other.rating);
+    }
+
+    public static ArrayList<Person> createList() {
+        Person p1 = new Person("Theo", 1);
+        Person p2 = new Person("Justin", 2);
+        Person p3 = new Person("Luna", 3);
+        Person p4 = new Person("Finn", 4);
+        Person p5 = new Person("Aliya", 5);
+        Person p6 = new Person("Emma", 6);
+        Person p7 = new Person("Grace", 7);
+        Person p9 = new Person("Vivian", 8);
+        Person p10 = new Person("Rayhan", 9);
+        Person p11 = new Person("Pranavi", 10);
+        Person p12 = new Person("Shivansh", 12);
+
+        ArrayList<Person> personList = new ArrayList<>();
+        personList.add(p1);
+        personList.add(p2);
+        personList.add(p3);
+        personList.add(p4);
+        personList.add(p5);
+        personList.add(p6);
+        personList.add(p7);
+        personList.add(p9);
+        personList.add(p10);
+        personList.add(p11);
+        personList.add(p12);
+
+        Collections.shuffle(personList);
+        
+        return personList;
+    }
+
+    // main method for test
+    public static void main(String[] args){
+        ArrayList<Person> personList = createList();
+
+        System.out.println("Unsorted list:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+    }
+}
+Person.main(null);
+```
+
+    Unsorted list:
+    Shivansh - Rate: 12
+    Luna - Rate: 3
+    Pranavi - Rate: 10
+    Rayhan - Rate: 9
+    Finn - Rate: 4
+    Justin - Rate: 2
+    Emma - Rate: 6
+    Theo - Rate: 1
+    Vivian - Rate: 8
+    Grace - Rate: 7
+    Aliya - Rate: 5
+
+
+## Bubble Sort
+
+
+```java
+public class BubbleSort {
+    // sorts using bubble
+    public static void bubble(ArrayList<Person> personList) {
+        int n = personList.size();
+        // iterate through each pair of elements in list
+        for (int i = 0; i < n - 1; i++)
+            for (int j = 0; j < n - i - 1; j++)
+                // compare each pair then...
+                if (personList.get(j).compareTo(personList.get(j + 1)) > 0)
+                    // ... swap if in wrong order
+                    Collections.swap(personList, j, j + 1);
+    }
+
+    //main method for test
+    public static void main(String[] args) {
+        // create list of Person objects
+        ArrayList<Person> personList = Person.createList();
+        
+        System.out.println("Unsorted list:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+
+        // sort w bubble sort
+        bubble(personList);
+
+        // sorted list
+        System.out.println("\nSorted List:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+    }
+}
+BubbleSort.main(null);
+```
+
+    Unsorted list:
+    Emma - Rate: 6
+    Finn - Rate: 4
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Aliya - Rate: 5
+    Rayhan - Rate: 9
+    Shivansh - Rate: 12
+    Theo - Rate: 1
+    Pranavi - Rate: 10
+    Luna - Rate: 3
+    Justin - Rate: 2
+    
+    Sorted List:
+    Theo - Rate: 1
+    Justin - Rate: 2
+    Luna - Rate: 3
+    Finn - Rate: 4
+    Aliya - Rate: 5
+    Emma - Rate: 6
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    Shivansh - Rate: 12
+
+
+## Selection Sort
+
+
+```java
+public class SelectionSort {
+    // sorts using selection
+    public static void selection(ArrayList<Person> personList) {
+        int n = personList.size();
+        // moving boundary line of unsorted array
+        for (int i = 0; i < n - 1; i++) {
+            // find min element of unsorted
+            int min_idx = i;
+            for (int j = i + 1; j < n; j++)
+                if (personList.get(j).compareTo(personList.get(min_idx)) < 0)
+                    min_idx = j;
+            // swap found min element with first element
+            Collections.swap(personList, min_idx, i);
+        }
+    }
+    //main method for test
+    public static void main(String[] args) {
+        // create list of Person objects
+        ArrayList<Person> personList = Person.createList();
+
+        System.out.println("Unsorted list:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+
+        // sort w selection sort
+        selection(personList);
+
+        // sorted list
+        System.out.println("\nSorted List:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+    }
+}
+SelectionSort.main(null);
+```
+
+    Unsorted list:
+    Pranavi - Rate: 10
+    Finn - Rate: 4
+    Luna - Rate: 3
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Shivansh - Rate: 12
+    Emma - Rate: 6
+    Justin - Rate: 2
+    Aliya - Rate: 5
+    Rayhan - Rate: 9
+    Theo - Rate: 1
+    
+    Sorted List:
+    Theo - Rate: 1
+    Justin - Rate: 2
+    Luna - Rate: 3
+    Finn - Rate: 4
+    Aliya - Rate: 5
+    Emma - Rate: 6
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    Shivansh - Rate: 12
+
+
+## Insertion
+
+
+```java
+public class InsertionSort {
+    public static void insertion(ArrayList<Person> personList) {
+        int n = personList.size();
+        for (int i = 1; i < n; i++) {
+            // start from second element and go to end
+            Person key = personList.get(i);
+            int j = i - 1;
+            // move elements greater than key to one forward
+            while (j >= 0 && personList.get(j).compareTo(key) > 0) {
+                personList.set(j + 1, personList.get(j));
+                j--;
+            }
+            personList.set(j + 1, key);
+        }
+    }
+    //main method for test
+    public static void main(String[] args) {
+        // create list of Person objects
+        ArrayList<Person> personList = Person.createList();
+
+        System.out.println("Unsorted list:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+
+        // sort w insertions sort
+        insertion(personList);
+
+        // sorted list
+        System.out.println("\nSorted List:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+    }
+}
+InsertionSort.main(null);
+```
+
+    Unsorted list:
+    Aliya - Rate: 5
+    Luna - Rate: 3
+    Vivian - Rate: 8
+    Emma - Rate: 6
+    Theo - Rate: 1
+    Finn - Rate: 4
+    Justin - Rate: 2
+    Shivansh - Rate: 12
+    Grace - Rate: 7
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    
+    Sorted List:
+    Theo - Rate: 1
+    Justin - Rate: 2
+    Luna - Rate: 3
+    Finn - Rate: 4
+    Aliya - Rate: 5
+    Emma - Rate: 6
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    Shivansh - Rate: 12
+
+
+## Merge Sort
+
+
+```java
+public class MergeSort {
+    public static void merge(ArrayList<Person> personList) {
+        if (personList.size() > 1) {
+            int mid = personList.size() / 2;
+            // split list into 2
+            ArrayList<Person> leftHalf = new ArrayList<>(personList.subList(0, mid));
+            ArrayList<Person> rightHalf = new ArrayList<>(personList.subList(mid, personList.size()));
+
+            // sort each half recursively
+            merge(leftHalf);
+            merge(rightHalf);
+
+            // merge sorted halves back in og personList
+            int i = 0, j = 0, k = 0;
+            while (i < leftHalf.size() && j < rightHalf.size()) {
+                if (leftHalf.get(i).compareTo(rightHalf.get(j)) <= 0) {
+                    personList.set(k, leftHalf.get(i));
+                    i++;
+                } else {
+                    personList.set(k, rightHalf.get(j));
+                    j++;
+                }
+                k++;
+            }
+
+            // copy remaining elements of left and right half (if any left)
+            while (i < leftHalf.size()) {
+                personList.set(k++, leftHalf.get(i++));
+            }
+            while (j < rightHalf.size()) {
+                personList.set(k++, rightHalf.get(j++));
+            }
+        }
+    }
+    // main method for test
+    public static void main(String[] args) {
+        // create list of Person objects
+        ArrayList<Person> personList = Person.createList();
+
+        System.out.println("Unsorted list:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+
+        // sort w merge sort
+        merge(personList);
+
+        // sorted list
+        System.out.println("\nSorted List:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+    }
+    }
+MergeSort.main(null);
+```
+
+    Unsorted list:
+    Finn - Rate: 4
+    Pranavi - Rate: 10
+    Rayhan - Rate: 9
+    Theo - Rate: 1
+    Grace - Rate: 7
+    Luna - Rate: 3
+    Justin - Rate: 2
+    Vivian - Rate: 8
+    Emma - Rate: 6
+    Shivansh - Rate: 12
+    Aliya - Rate: 5
+    
+    Sorted List:
+    Theo - Rate: 1
+    Justin - Rate: 2
+    Luna - Rate: 3
+    Finn - Rate: 4
+    Aliya - Rate: 5
+    Emma - Rate: 6
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    Shivansh - Rate: 12
+
+
+## Quick Sort
+
+
+```java
+public class QuickSort {
+    // public quick sort method for recursive
+    public static void quick(ArrayList<Person> personList) {
+        quickSortHelper(personList, 0, personList.size() - 1);
+    }
+
+    // recursive quicksort method
+    private static void quickSortHelper(ArrayList<Person> personList, int low, int high) {
+        if (low < high) {
+            // partition list and get pivot index
+            int pi = partition(personList, low, high);
+            // quicksor the partitions
+            quickSortHelper(personList, low, pi - 1);
+            quickSortHelper(personList, pi + 1, high);
+        }
+    }
+
+    // partition the list around the pivot
+    private static int partition(ArrayList<Person> personList, int low, int high) {
+        Person pivot = personList.get(high);
+        int i = (low - 1);
+
+        // rearrange elements around pivot
+        for (int j = low; j < high; j++) {
+            if (personList.get(j).compareTo(pivot) <= 0) {
+                i++;
+                Collections.swap(personList, i, j);
+            }
+        }
+        // put pivot in right position
+        Collections.swap(personList, i + 1, high);
+        return i + 1;
+    }
+    // main method for test
+    public static void main(String[] args) {
+        // create list of Person objects
+        ArrayList<Person> personList = Person.createList();
+
+        System.out.println("Unsorted list:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+
+        // sort w quick sort
+        quick(personList);
+
+        // sorted list
+        System.out.println("\nSorted List:");
+        for (Person person : personList) {
+            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+        }
+    }
+}
+QuickSort.main(null);
+```
+
+    Unsorted list:
+    Theo - Rate: 1
+    Rayhan - Rate: 9
+    Shivansh - Rate: 12
+    Aliya - Rate: 5
+    Emma - Rate: 6
+    Vivian - Rate: 8
+    Grace - Rate: 7
+    Finn - Rate: 4
+    Luna - Rate: 3
+    Pranavi - Rate: 10
+    Justin - Rate: 2
+    
+    Sorted List:
+    Theo - Rate: 1
+    Justin - Rate: 2
+    Luna - Rate: 3
+    Finn - Rate: 4
+    Aliya - Rate: 5
+    Emma - Rate: 6
+    Grace - Rate: 7
+    Vivian - Rate: 8
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    Shivansh - Rate: 12
+
