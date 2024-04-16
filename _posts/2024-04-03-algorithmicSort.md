@@ -243,12 +243,12 @@ public class algorithmicSort {
         */
     
         // times for each sort
-        System.out.println("\nElapsed times:");
+        System.out.println("\nElapsed times to sort:");
         System.out.println("Bubble sort: " + bubbleTime + " ms");
-        System.out.println("Selection sort: " + selectionTime);
-        System.out.println("Insertion sort: " + insertionTime);
-        System.out.println("Merge sort: " + mergeTime);
-        System.out.println("Quick sort: " + quickTime);
+        System.out.println("Selection sort: " + selectionTime + " ms");
+        System.out.println("Insertion sort: " + insertionTime + " ms");
+        System.out.println("Merge sort: " + mergeTime + " ms");
+        System.out.println("Quick sort: " + quickTime + " ms");
     }
 }
 algorithmicSort.main(null);
