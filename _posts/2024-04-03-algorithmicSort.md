@@ -7,6 +7,9 @@ categories: ['AP Test Prep', 'Java', 'Tri 3']
 tags: ['Notebook', 'FRQ', 'Java', 'Sort']
 ---
 
+# Sorting Dance
+Sorting the Algorithmic Dance for our performance of bachelors and ratings. People are sorted in order from least to greatest based on their given ratings. 
+
 # Comparable and compareTo
 Comparing "Person" objects based on numeric "rating" with the compareTo method:
 
