@@ -255,22 +255,22 @@ algorithmicSort.main(null);
 ```
 
     Unsorted list:
-    Pranavi - Rate: 10
-    Rayhan - Rate: 9
+    Luna - Rate: 3
+    Emma - Rate: 6
     Justin - Rate: 2
-    Grace - Rate: 7
-    Shivansh - Rate: 12
     Theo - Rate: 1
     Aliya - Rate: 5
     Finn - Rate: 4
-    Emma - Rate: 6
-    Luna - Rate: 3
     Vivian - Rate: 8
+    Rayhan - Rate: 9
+    Pranavi - Rate: 10
+    Shivansh - Rate: 12
+    Grace - Rate: 7
     
-    Elapsed times in ms:
-    Bubble sort: 0
-    Selection sort: 0
-    Insertion sort: 0
-    Merge sort: 14
-    Quick sort: 15
+    Elapsed times to sort:
+    Bubble sort: 1 ms
+    Selection sort: 0 ms
+    Insertion sort: 1 ms
+    Merge sort: 1 ms
+    Quick sort: 0 ms
 
