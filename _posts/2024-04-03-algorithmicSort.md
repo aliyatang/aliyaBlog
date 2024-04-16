@@ -82,40 +82,29 @@ public class Person implements Comparable<Person>{
         
         return personList;
     }
-
-    // main method for test
-    public static void main(String[] args){
-        ArrayList<Person> personList = createList();
-
-        System.out.println("Unsorted list:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-    }
 }
-Person.main(null);
 ```
-
-    Unsorted list:
-    Shivansh - Rate: 12
-    Luna - Rate: 3
-    Pranavi - Rate: 10
-    Rayhan - Rate: 9
-    Finn - Rate: 4
-    Justin - Rate: 2
-    Emma - Rate: 6
-    Theo - Rate: 1
-    Vivian - Rate: 8
-    Grace - Rate: 7
-    Aliya - Rate: 5
-
-
-## Bubble Sort
 
 
 ```java
-public class BubbleSort {
-    // sorts using bubble
+// timer for sorts
+public class TimerUtility {
+    // method for timing sorts
+    public static long timeExecution(Runnable sortMethod) {
+        long startTime = System.currentTimeMillis();
+        sortMethod.run();
+        long endTime = System.currentTimeMillis();
+        return endTime - startTime; // return time elapsed in milliseconds
+    }
+}
+```
+
+## All Sorts - Bubble, Selection, Insertion, Merge, Quick
+
+
+```java
+public class algorithmicSort {
+    // bubble
     public static void bubble(ArrayList<Person> personList) {
         int n = personList.size();
         // iterate through each pair of elements in list
@@ -127,62 +116,7 @@ public class BubbleSort {
                     Collections.swap(personList, j, j + 1);
     }
 
-    //main method for test
-    public static void main(String[] args) {
-        // create list of Person objects
-        ArrayList<Person> personList = Person.createList();
-        
-        System.out.println("Unsorted list:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-
-        // sort w bubble sort
-        bubble(personList);
-
-        // sorted list
-        System.out.println("\nSorted List:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-    }
-}
-BubbleSort.main(null);
-```
-
-    Unsorted list:
-    Emma - Rate: 6
-    Finn - Rate: 4
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Aliya - Rate: 5
-    Rayhan - Rate: 9
-    Shivansh - Rate: 12
-    Theo - Rate: 1
-    Pranavi - Rate: 10
-    Luna - Rate: 3
-    Justin - Rate: 2
-    
-    Sorted List:
-    Theo - Rate: 1
-    Justin - Rate: 2
-    Luna - Rate: 3
-    Finn - Rate: 4
-    Aliya - Rate: 5
-    Emma - Rate: 6
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    Shivansh - Rate: 12
-
-
-## Selection Sort
-
-
-```java
-public class SelectionSort {
-    // sorts using selection
+    // selection
     public static void selection(ArrayList<Person> personList) {
         int n = personList.size();
         // moving boundary line of unsorted array
@@ -196,61 +130,8 @@ public class SelectionSort {
             Collections.swap(personList, min_idx, i);
         }
     }
-    //main method for test
-    public static void main(String[] args) {
-        // create list of Person objects
-        ArrayList<Person> personList = Person.createList();
 
-        System.out.println("Unsorted list:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-
-        // sort w selection sort
-        selection(personList);
-
-        // sorted list
-        System.out.println("\nSorted List:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-    }
-}
-SelectionSort.main(null);
-```
-
-    Unsorted list:
-    Pranavi - Rate: 10
-    Finn - Rate: 4
-    Luna - Rate: 3
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Shivansh - Rate: 12
-    Emma - Rate: 6
-    Justin - Rate: 2
-    Aliya - Rate: 5
-    Rayhan - Rate: 9
-    Theo - Rate: 1
-    
-    Sorted List:
-    Theo - Rate: 1
-    Justin - Rate: 2
-    Luna - Rate: 3
-    Finn - Rate: 4
-    Aliya - Rate: 5
-    Emma - Rate: 6
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    Shivansh - Rate: 12
-
-
-## Insertion
-
-
-```java
-public class InsertionSort {
+    // insertion
     public static void insertion(ArrayList<Person> personList) {
         int n = personList.size();
         for (int i = 1; i < n; i++) {
@@ -265,61 +146,8 @@ public class InsertionSort {
             personList.set(j + 1, key);
         }
     }
-    //main method for test
-    public static void main(String[] args) {
-        // create list of Person objects
-        ArrayList<Person> personList = Person.createList();
 
-        System.out.println("Unsorted list:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-
-        // sort w insertions sort
-        insertion(personList);
-
-        // sorted list
-        System.out.println("\nSorted List:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-    }
-}
-InsertionSort.main(null);
-```
-
-    Unsorted list:
-    Aliya - Rate: 5
-    Luna - Rate: 3
-    Vivian - Rate: 8
-    Emma - Rate: 6
-    Theo - Rate: 1
-    Finn - Rate: 4
-    Justin - Rate: 2
-    Shivansh - Rate: 12
-    Grace - Rate: 7
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    
-    Sorted List:
-    Theo - Rate: 1
-    Justin - Rate: 2
-    Luna - Rate: 3
-    Finn - Rate: 4
-    Aliya - Rate: 5
-    Emma - Rate: 6
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    Shivansh - Rate: 12
-
-
-## Merge Sort
-
-
-```java
-public class MergeSort {
+    // merge
     public static void merge(ArrayList<Person> personList) {
         if (personList.size() > 1) {
             int mid = personList.size() / 2;
@@ -353,61 +181,8 @@ public class MergeSort {
             }
         }
     }
-    // main method for test
-    public static void main(String[] args) {
-        // create list of Person objects
-        ArrayList<Person> personList = Person.createList();
-
-        System.out.println("Unsorted list:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-
-        // sort w merge sort
-        merge(personList);
-
-        // sorted list
-        System.out.println("\nSorted List:");
-        for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
-        }
-    }
-    }
-MergeSort.main(null);
-```
-
-    Unsorted list:
-    Finn - Rate: 4
-    Pranavi - Rate: 10
-    Rayhan - Rate: 9
-    Theo - Rate: 1
-    Grace - Rate: 7
-    Luna - Rate: 3
-    Justin - Rate: 2
-    Vivian - Rate: 8
-    Emma - Rate: 6
-    Shivansh - Rate: 12
-    Aliya - Rate: 5
     
-    Sorted List:
-    Theo - Rate: 1
-    Justin - Rate: 2
-    Luna - Rate: 3
-    Finn - Rate: 4
-    Aliya - Rate: 5
-    Emma - Rate: 6
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    Shivansh - Rate: 12
-
-
-## Quick Sort
-
-
-```java
-public class QuickSort {
+    // quick
     // public quick sort method for recursive
     public static void quick(ArrayList<Person> personList) {
         quickSortHelper(personList, 0, personList.size() - 1);
@@ -440,52 +215,62 @@ public class QuickSort {
         Collections.swap(personList, i + 1, high);
         return i + 1;
     }
+    
     // main method for test
     public static void main(String[] args) {
         // create list of Person objects
         ArrayList<Person> personList = Person.createList();
-
+    
+        // unsorted
         System.out.println("Unsorted list:");
         for (Person person : personList) {
             System.out.println(person.getName()+ " - Rate: " + person.getRating());
         }
-
-        // sort w quick sort
-        quick(personList);
-
+    
+         // timing each sort
+        long bubbleTime = TimerUtility.timeExecution(() -> bubble(personList));
+        long selectionTime = TimerUtility.timeExecution(() -> selection(personList));
+        long insertionTime = TimerUtility.timeExecution(() -> insertion(personList));
+        long mergeTime = TimerUtility.timeExecution(() -> merge(personList));
+        long quickTime = TimerUtility.timeExecution(() -> quick(personList));
+    
         // sorted list
-        System.out.println("\nSorted List:");
+        /*
+        System.out.println("Sorted List:");
         for (Person person : personList) {
             System.out.println(person.getName()+ " - Rate: " + person.getRating());
         }
+        */
+    
+        // times for each sort
+        System.out.println("\nElapsed times:");
+        System.out.println("Bubble sort: " + bubbleTime + " ms");
+        System.out.println("Selection sort: " + selectionTime);
+        System.out.println("Insertion sort: " + insertionTime);
+        System.out.println("Merge sort: " + mergeTime);
+        System.out.println("Quick sort: " + quickTime);
     }
 }
-QuickSort.main(null);
+algorithmicSort.main(null);
 ```
 
     Unsorted list:
-    Theo - Rate: 1
-    Rayhan - Rate: 9
-    Shivansh - Rate: 12
-    Aliya - Rate: 5
-    Emma - Rate: 6
-    Vivian - Rate: 8
-    Grace - Rate: 7
-    Finn - Rate: 4
-    Luna - Rate: 3
     Pranavi - Rate: 10
+    Rayhan - Rate: 9
     Justin - Rate: 2
+    Grace - Rate: 7
+    Shivansh - Rate: 12
+    Theo - Rate: 1
+    Aliya - Rate: 5
+    Finn - Rate: 4
+    Emma - Rate: 6
+    Luna - Rate: 3
+    Vivian - Rate: 8
     
-    Sorted List:
-    Theo - Rate: 1
-    Justin - Rate: 2
-    Luna - Rate: 3
-    Finn - Rate: 4
-    Aliya - Rate: 5
-    Emma - Rate: 6
-    Grace - Rate: 7
-    Vivian - Rate: 8
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    Shivansh - Rate: 12
+    Elapsed times in ms:
+    Bubble sort: 0
+    Selection sort: 0
+    Insertion sort: 0
+    Merge sort: 14
+    Quick sort: 15
 
