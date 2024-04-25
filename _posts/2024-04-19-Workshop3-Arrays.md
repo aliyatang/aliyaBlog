@@ -390,7 +390,15 @@ public static int arraySum(int[] arr){
 ```java
 /** Returns a one-dimensional array in which the entry at index k is the sum of * the entries of row k of the two-dimensional array arr2D. */ 
 public static int[] rowSums(int[][] arr2D){
-    
+    int row = arr2D.length();
+
+    // initialize array of each row sums
+    int[] eachRowSum = new int[row];
+    int rowIndex = 0;
+    for (int[] row: arr2D){
+        eachRowSum[rowIndex] = arraySum(row);
+        rowIndex++;
+    }
 }
 ```
 
@@ -401,5 +409,15 @@ public static int[] rowSums(int[][] arr2D){
 
 ```java
 /** Returns true if all rows in arr2D have different row sums; * false otherwise. */ 
-public static boolean isDiverse(int[][] arr2D)
+public static boolean isDiverse(int[][] arr2D){
+    int[] DiverseRowSums = rowSums(arr2D);
+    for (int i = 0; i < DiverseRowSums.length(); i++){
+        for (int j = i+1; j < DiverseRowSums.length(); i++){
+            if (DiverseRowSums[i] == DiverseRowSums[j]){ // remember, i and j are the INDEXES, do DiverseRowSums[i/j] to get the actual sum/values to compare
+                return false;
+            }
+        }
+    }
+    return true;
+}
 ```
