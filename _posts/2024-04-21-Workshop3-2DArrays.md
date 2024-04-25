@@ -321,12 +321,39 @@ public class Delimiters {
         closeDel = close;
     }
     
+    // part a
     public ArrayList<String> getDelimitersList(String[] tokens){
-        
+        ArrayList<String> DelimetersList = new ArrayList<>;
+        for (String token: tokens){ // remember to put String in front of token
+            if (token.equals(openDel) || token.equals(closeDel)){ // have to do ".equals" NOT "==" to check if characters in string are same
+                DelimetersList.add(token);
+            }
+        }
+        return DelimetersList;
     }
     
-    public boolean isBalanced(ArrayList<String> delimiters)
-    { /* to be implemented in part (b) */ }
+    // part b
+    public boolean isBalanced(ArrayList<String> delimiters){
+        int openDelCount = 0;
+        int closeDelCount = 0;
+
+        for (String del: delimiters){
+            if (del.equals(openDel)){
+                openDelCount += 1;
+            } elif (del.equals(closeDel)){
+                openCloseCount += 1;
+            }
+            // condition 1: no point where amount of close delimiters greater than open delimiters
+            if (closeDelCount > openDelCount){
+                return false;
+            }
+        }
+        // condition 2: total open and close delimiters count must be equal
+        if (openDelCount != closeDelCount){
+            return false;
+        }
+        return true;
+    }
     // There may be instance variables, constructors, and methods that are not shown.
 } 
 ```
