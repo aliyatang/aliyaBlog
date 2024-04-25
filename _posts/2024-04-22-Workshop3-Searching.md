@@ -466,6 +466,7 @@ public class Garage {
         }
     }
 
+    // removing car hack!!!
     public void removeCar(String key) {
         Car removedCar = garage.remove(key);
         if (removedCar == null) {
