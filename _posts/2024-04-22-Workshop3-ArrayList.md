@@ -402,7 +402,7 @@ HackHelper.main(null);
 
 - Deleting elements during a traversal of an Arraylist requires special techniques to avoid skiping elements.
 
-- The indicies of an Arraylist start at ___; If you try to use any value lower than 0, you will get an ______ error
+- The indicies of an Arraylist start at 0; If you try to use any value lower than 0, you will get an IndexOutOfBoundsException error
 
 
 ```java
