@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unit 6.1 - 6.3 Focused on Arrays and Array Examination
+title: Workshop 3 - Arrays
 type: ccc
 week: 27
 categories: ['AP Test Prep', 'Java', 'Tri 3']

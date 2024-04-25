@@ -1,5 +1,5 @@
 ---
-title: Workshop 2 2D Arrays
+title: Workshop 3 - 2D Arrays
 description: Unit 8 of CB
 toc: True
 layout: post

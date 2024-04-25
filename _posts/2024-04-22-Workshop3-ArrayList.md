@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Workshop 2 ArrayList
+title: Workshop 3 - ArrayList
 type: ccc
 week: 27
 categories: ['AP Test Prep', 'Java', 'Tri 3']

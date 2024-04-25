@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Workshop 2 Searching
+title: Workshop 3 - Searching
 type: ccc
 week: 27
 categories: ['AP Test Prep', 'Java', 'Tri 3']
