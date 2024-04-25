@@ -320,6 +320,68 @@ System.out.print(arraySum(arr1));
 
     16
 
+### Common mistakes (that specifically I should watch out for)  for part a
+- when using for loops
+
+
+```java
+// off by one errors
+public static int arraySum(int[] arr){
+    int sum = 0;
+    for (int i = 0; i <= arr.length; i++) { // used arr.length instead of arr.length -1
+        sum += arr[i]; // ArrayIndexOutOfBoundsException
+    }
+    return sum;
+}
+```
+
+
+```java
+// ignoring returned value of arrayList.remove(index)
+// this mistake doesn't rlly apply in this case though bc no method call returns a value to ignore
+public static int arraySum(int[] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * 2;
+        sum += arr[i];
+    }
+    return sum;
+}
+```
+
+
+```java
+// trying to modify the length of the array during traversal
+// just avoid trying to modify length whatsoever during traversal
+public static int arraySum(int[] arr){
+    int sum = 0;
+    for (int i = 0; i < arr.length; i++) {
+        arr[i] = arr[i] * 2; // doesn't change the length but acc modifies the elements
+        sum += arr[i];
+    }
+    return sum;
+}
+```
+
+- when using for each loops
+
+
+```java
+// trying to remove elements within for each loop
+public static int arraySum(int[] arr){
+    int sum = 0;
+    ArrayList<Integer> numbers = new ArrayList<>(Arrays.asList(1, 2, 3, 4, 5));
+    for (int n : numbers) {
+        numbers.remove(n); // ConcurrentModificationException
+        sum += n;
+    }
+    return sum;
+}
+```
+
+- Remove elements in for loop, fix by using traditional for loop
+- Also use traditional for loop if modifying elements, tracking index, iterating backwards, iterating multiple steps, process two arrays in parallel
+
 <img width="667" alt="image" src="https://github.com/AniCricKet/musical-guacamole/assets/91163802/84cb12be-b868-441a-96d0-51b12ff0d697">
 
 (b) Write a static method rowSums that calculates the sums of each of the rows in a given twodimensional array and returns these sums in a one-dimensional array. The method has one parameter, a twodimensional array arr2D of int values. The array is in row-major order: arr2D[r][c] is the entry at row r and column c. The method returns a one-dimensional array with one entry for each row of arr2D such that each entry is the sum of the corresponding row in arr2D. As a reminder, each row of a two-dimensional array is a one-dimensional array. For example, if mat1 is the array represented by the following table, the call rowSums(mat1) returns the array {16, 32, 28, 20}. Assume that arraySum works as specified, regardless of what you wrote in part (a). You must use arraySum appropriately to receive full credit. Complete method rowSums below.

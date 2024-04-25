@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Searching Lesson
+title: Workshop 2 Searching
 type: ccc
 week: 27
 categories: ['AP Test Prep', 'Java', 'Tri 3']
@@ -513,7 +513,7 @@ Garage.main(null);
 - Hard to sort if array is frequently modified
 
 3. Which of the following implements a method named contains for searching an array sequentially, confirming whether or not the array contains a requested element?
-- The fourth one.
+- The fourth one is correct: It returns true immediate when it finds the desired element and exits out of the loop, if it doesn't find desired element after searching entire arr it will return false. This is correct
 
 ![](https://raw.githubusercontent.com/Codemaxxers/codemaxxerblog/main/images/4isanswer.jpg)
 
