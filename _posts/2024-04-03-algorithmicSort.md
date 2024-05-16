@@ -10,7 +10,7 @@ tags: ['Notebook', 'FRQ', 'Java', 'Sort']
 # Sorting Dance
 Sorting the Algorithmic Dance for our performance of bachelors and ratings. People are sorted in order from least to greatest based on their given ratings. 
 
-# Comparable and compareTo
+# Comparable and compareTo Research
 Comparing "Person" objects based on numeric "rating" with the compareTo method:
 
 - comparing this.rating and other.rating: result of this.rating - other.rating is negative, positive, or 0. 
@@ -273,4 +273,124 @@ algorithmicSort.main(null);
     Insertion sort: 1 ms
     Merge sort: 1 ms
     Quick sort: 0 ms
+
+
+# LinkedList Research
+- LinkedList is linear data structure made up of sequence of elements called nodes. 
+- Each node contains data element and reference to next node in the sequence (last node usually points to null, indicates end of list)
+
+## LinkedList vs. Array
+- LinkedList NOT fixed size and elements aren't in contiguous memory locations. Each element/node is actually containing a pointer to next in sequence.
+- Efficient insertion and deletion anywhere in the list
+
+## Downsides
+- Arrays allow direct acces to any element using index, but LinkedList reqruie sequential traversal from beginning or end to access specific element
+- More memory to store pointers/references to next node, along with actual data
+
+
+```java
+public class LinkedList {
+
+    // represent a node of the singly linked list
+    class Node {
+        int data;
+        Node next;
+
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // represent the head of the singly linked list
+    public Node head = null;
+
+    // addNode() will add a new node to the list
+    public void addNode(int data) {
+        // Create a new node
+        Node newNode = new Node(data);
+
+        // if the list is empty, make the new node as head
+        if (head == null) {
+            head = newNode;
+        } else {
+            // traverse to the last node and add the new node
+            Node current = head;
+            while (current.next != null) {
+                current = current.next;
+            }
+            current.next = newNode;
+        }
+    }
+
+    // sortList() will sort nodes of the list in ascending order using Selection Sort
+    public void selectionSort() {
+        Node current = head;
+
+        // traverse through the list
+        while (current != null) {
+            Node index = current.next;
+            Node min = current;
+
+            // find the minimum element in the unsorted part of the list
+            while (index != null) {
+                if (index.data < min.data) {
+                    min = index;
+                }
+                index = index.next;
+            }
+
+            // swap the minimum element with the current element
+            int temp = current.data;
+            current.data = min.data;
+            min.data = temp;
+
+            // move to the next node
+            current = current.next;
+        }
+    }
+
+    // display() will display all the nodes present in the list
+    public void display() {
+        Node current = head;
+        if (head == null) {
+            System.out.println("List is empty");
+            return;
+        }
+        while (current != null) {
+            // print each node's data
+            System.out.print(current.data + " ");
+            current = current.next;
+        }
+        System.out.println();
+    }
+
+    public static void main(String[] args) {
+        LinkedList sList = new LinkedList();
+
+        // add data to the list
+        sList.addNode(8);
+        sList.addNode(3);
+        sList.addNode(7);
+        sList.addNode(4);
+
+        // display original list
+        System.out.println("Original list:");
+        sList.display();
+
+        // sort the list using Selection Sort
+        sList.selectionSort();
+
+        // display sorted list
+        System.out.println("Sorted list:");
+        sList.display();
+    }
+}
+LinkedList.main(null);
+```
+
+    Original list:
+    8 3 7 4 
+    Sorted list:
+    3 4 7 8 
 
