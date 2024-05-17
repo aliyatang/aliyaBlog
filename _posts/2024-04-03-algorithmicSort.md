@@ -85,27 +85,23 @@ public class Person implements Comparable<Person>{
 }
 ```
 
-
-```java
-// timer for sorts
-public class TimerUtility {
-    // method for timing sorts
-    public static long timeExecution(Runnable sortMethod) {
-        long startTime = System.currentTimeMillis();
-        sortMethod.run();
-        long endTime = System.currentTimeMillis();
-        return endTime - startTime; // return time elapsed in milliseconds
-    }
-}
-```
-
 ## All Sorts - Bubble, Selection, Insertion, Merge, Quick
 
 
 ```java
+import java.util.ArrayList;
+import java.util.Collections;
+
 public class algorithmicSort {
-    // bubble
-    public static void bubble(ArrayList<Person> personList) {
+    private ArrayList<Person> personList;
+
+    // constructor to initialize personList
+    public algorithmicSort(ArrayList<Person> personList) {
+        this.personList = personList;
+    }
+
+    // bubble sort
+    public void bubble() {
         int n = personList.size();
         // iterate through each pair of elements in list
         for (int i = 0; i < n - 1; i++)
@@ -116,8 +112,8 @@ public class algorithmicSort {
                     Collections.swap(personList, j, j + 1);
     }
 
-    // selection
-    public static void selection(ArrayList<Person> personList) {
+    // selection sort
+    public void selection() {
         int n = personList.size();
         // moving boundary line of unsorted array
         for (int i = 0; i < n - 1; i++) {
@@ -131,8 +127,8 @@ public class algorithmicSort {
         }
     }
 
-    // insertion
-    public static void insertion(ArrayList<Person> personList) {
+    // insertion sort
+    public void insertion() {
         int n = personList.size();
         for (int i = 1; i < n; i++) {
             // start from second element and go to end
@@ -147,8 +143,12 @@ public class algorithmicSort {
         }
     }
 
-    // merge
-    public static void merge(ArrayList<Person> personList) {
+    // merge sort
+    public void merge() {
+        mergeSort(personList);
+    }
+
+    private void mergeSort(ArrayList<Person> personList) {
         if (personList.size() > 1) {
             int mid = personList.size() / 2;
             // split list into 2
@@ -156,8 +156,8 @@ public class algorithmicSort {
             ArrayList<Person> rightHalf = new ArrayList<>(personList.subList(mid, personList.size()));
 
             // sort each half recursively
-            merge(leftHalf);
-            merge(rightHalf);
+            mergeSort(leftHalf);
+            mergeSort(rightHalf);
 
             // merge sorted halves back in og personList
             int i = 0, j = 0, k = 0;
@@ -181,26 +181,26 @@ public class algorithmicSort {
             }
         }
     }
-    
-    // quick
+
+    // quick sort
     // public quick sort method for recursive
-    public static void quick(ArrayList<Person> personList) {
-        quickSortHelper(personList, 0, personList.size() - 1);
+    public void quick() {
+        quickSortHelper(0, personList.size() - 1);
     }
 
     // recursive quicksort method
-    private static void quickSortHelper(ArrayList<Person> personList, int low, int high) {
+    private void quickSortHelper(int low, int high) {
         if (low < high) {
             // partition list and get pivot index
-            int pi = partition(personList, low, high);
-            // quicksor the partitions
-            quickSortHelper(personList, low, pi - 1);
-            quickSortHelper(personList, pi + 1, high);
+            int pi = partition(low, high);
+            // quicksort the partitions
+            quickSortHelper(low, pi - 1);
+            quickSortHelper(pi + 1, high);
         }
     }
 
     // partition the list around the pivot
-    private static int partition(ArrayList<Person> personList, int low, int high) {
+    private int partition(int low, int high) {
         Person pivot = personList.get(high);
         int i = (low - 1);
 
@@ -215,64 +215,84 @@ public class algorithmicSort {
         Collections.swap(personList, i + 1, high);
         return i + 1;
     }
-    
+
+    // timer for sorts
+    public static long timeExecution(Runnable sortMethod) {
+        long startTime = System.currentTimeMillis();
+        sortMethod.run();
+        long endTime = System.currentTimeMillis();
+        return endTime - startTime; // return time elapsed in milliseconds
+    }
+
     // main method for test
     public static void main(String[] args) {
         // create list of Person objects
         ArrayList<Person> personList = Person.createList();
-    
+
         // unsorted
-        System.out.println("Unsorted list:");
+        System.out.println("unsorted list:");
         for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+            System.out.println(person.getName() + " - rate: " + person.getRating());
         }
-    
-         // timing each sort
-        long bubbleTime = TimerUtility.timeExecution(() -> bubble(personList));
-        long selectionTime = TimerUtility.timeExecution(() -> selection(personList));
-        long insertionTime = TimerUtility.timeExecution(() -> insertion(personList));
-        long mergeTime = TimerUtility.timeExecution(() -> merge(personList));
-        long quickTime = TimerUtility.timeExecution(() -> quick(personList));
-    
+
+        algorithmicSort sorter = new algorithmicSort(personList);
+
+        // list of sorting methods and their names
+        String[] sortNames = {"bubble", "selection", "insertion", "merge", "quick"};
+        Runnable[] sortMethods = {
+            sorter::bubble,
+            sorter::selection,
+            sorter::insertion,
+            sorter::merge,
+            sorter::quick
+        };
+
+        // timing each sort
+        long[] sortTimes = new long[sortNames.length];
+        for (int i = 0; i < sortNames.length; i++) {
+            // reset personList to unsorted state for each sort
+            personList = Person.createList();
+            sorter.personList = personList;
+            sortTimes[i] = timeExecution(sortMethods[i]);
+        }
+
         // sorted list
         /*
-        System.out.println("Sorted List:");
+        System.out.println("sorted list:");
         for (Person person : personList) {
-            System.out.println(person.getName()+ " - Rate: " + person.getRating());
+            System.out.println(person.getName() + " - rate: " + person.getRating());
         }
         */
-    
+
         // times for each sort
-        System.out.println("\nElapsed times to sort:");
-        System.out.println("Bubble sort: " + bubbleTime + " ms");
-        System.out.println("Selection sort: " + selectionTime + " ms");
-        System.out.println("Insertion sort: " + insertionTime + " ms");
-        System.out.println("Merge sort: " + mergeTime + " ms");
-        System.out.println("Quick sort: " + quickTime + " ms");
+        System.out.println("\nelapsed times to sort:");
+        for (int i = 0; i < sortNames.length; i++) {
+            System.out.println(sortNames[i] + " sort: " + sortTimes[i] + " ms");
+        }
     }
 }
 algorithmicSort.main(null);
 ```
 
-    Unsorted list:
-    Luna - Rate: 3
-    Emma - Rate: 6
-    Justin - Rate: 2
-    Theo - Rate: 1
-    Aliya - Rate: 5
-    Finn - Rate: 4
-    Vivian - Rate: 8
-    Rayhan - Rate: 9
-    Pranavi - Rate: 10
-    Shivansh - Rate: 12
-    Grace - Rate: 7
+    unsorted list:
+    Luna - rate: 3
+    Finn - rate: 4
+    Justin - rate: 2
+    Emma - rate: 6
+    Aliya - rate: 5
+    Theo - rate: 1
+    Grace - rate: 7
+    Pranavi - rate: 10
+    Vivian - rate: 8
+    Shivansh - rate: 12
+    Rayhan - rate: 9
     
-    Elapsed times to sort:
-    Bubble sort: 1 ms
-    Selection sort: 0 ms
-    Insertion sort: 1 ms
-    Merge sort: 1 ms
-    Quick sort: 0 ms
+    elapsed times to sort:
+    bubble sort: 0 ms
+    selection sort: 0 ms
+    insertion sort: 1 ms
+    merge sort: 0 ms
+    quick sort: 4 ms
 
 
 # LinkedList Research
@@ -291,7 +311,6 @@ algorithmicSort.main(null);
 ```java
 public class LinkedList {
 
-    // represent a node of the singly linked list
     class Node {
         int data;
         Node next;
@@ -302,19 +321,13 @@ public class LinkedList {
         }
     }
 
-    // represent the head of the singly linked list
-    public Node head = null;
+    private Node head = null;
 
-    // addNode() will add a new node to the list
     public void addNode(int data) {
-        // Create a new node
         Node newNode = new Node(data);
-
-        // if the list is empty, make the new node as head
         if (head == null) {
             head = newNode;
         } else {
-            // traverse to the last node and add the new node
             Node current = head;
             while (current.next != null) {
                 current = current.next;
@@ -323,34 +336,124 @@ public class LinkedList {
         }
     }
 
-    // sortList() will sort nodes of the list in ascending order using Selection Sort
+    public void clear() {
+        head = null;
+    }
+
     public void selectionSort() {
         Node current = head;
-
-        // traverse through the list
         while (current != null) {
             Node index = current.next;
             Node min = current;
-
-            // find the minimum element in the unsorted part of the list
             while (index != null) {
                 if (index.data < min.data) {
                     min = index;
                 }
                 index = index.next;
             }
-
-            // swap the minimum element with the current element
             int temp = current.data;
             current.data = min.data;
             min.data = temp;
-
-            // move to the next node
             current = current.next;
         }
     }
 
-    // display() will display all the nodes present in the list
+    public void bubbleSort() {
+        Node end = null;
+        while (end != head) {
+            Node current = head;
+            Node next = head.next;
+            while (next != end) {
+                if (current.data > next.data) {
+                    int temp = current.data;
+                    current.data = next.data;
+                    next.data = temp;
+                }
+                current = next;
+                next = next.next;
+            }
+            end = current;
+        }
+    }
+
+    public void insertionSort() {
+        Node sorted = null;
+        Node current = head;
+        while (current != null) {
+            Node next = current.next;
+            if (sorted == null || sorted.data >= current.data) {
+                current.next = sorted;
+                sorted = current;
+            } else {
+                Node temp = sorted;
+                while (temp.next != null && temp.next.data < current.data) {
+                    temp = temp.next;
+                }
+                current.next = temp.next;
+                temp.next = current;
+            }
+            current = next;
+        }
+        head = sorted;
+    }
+
+    public void mergeSort() {
+        head = mergeSort(head);
+    }
+
+    private Node mergeSort(Node node) {
+        if (node == null || node.next == null) {
+            return node;
+        }
+        Node middle = getMiddle(node);
+        Node nextOfMiddle = middle.next;
+        middle.next = null;
+        Node left = mergeSort(node);
+        Node right = mergeSort(nextOfMiddle);
+        return merge(left, right);
+    }
+
+    private Node merge(Node left, Node right) {
+        Node result;
+        if (left == null) {
+            return right;
+        }
+        if (right == null) {
+            return left;
+        }
+        if (left.data <= right.data) {
+            result = left;
+            result.next = merge(left.next, right);
+        } else {
+            result = right;
+            result.next = merge(left, right.next);
+        }
+        return result;
+    }
+
+    private Node getMiddle(Node node) {
+        if (node == null) {
+            return node;
+        }
+        Node slow = node;
+        Node fast = node.next;
+        while (fast != null) {
+            fast = fast.next;
+            if (fast != null) {
+                slow = slow.next;
+                fast = fast.next;
+            }
+        }
+        return slow;
+    }
+
+    private Node getTail(Node node) {
+        while (node != null && node.next != null) {
+            node = node.next;
+        }
+        return node;
+    }
+
     public void display() {
         Node current = head;
         if (head == null) {
@@ -358,39 +461,74 @@ public class LinkedList {
             return;
         }
         while (current != null) {
-            // print each node's data
             System.out.print(current.data + " ");
             current = current.next;
         }
         System.out.println();
     }
 
+    public void resetList() {
+        clear();
+        addNode(8);
+        addNode(39);
+        addNode(7);
+        addNode(43);
+        addNode(5);
+        addNode(91);
+        addNode(12);
+        addNode(2);
+        addNode(86);
+        addNode(33);
+        addNode(7);
+    }
+
+    // timer for sorts
+    public static long timeExecution(Runnable sortMethod) {
+        long startTime = System.currentTimeMillis();
+        sortMethod.run();
+        long endTime = System.currentTimeMillis();
+        return endTime - startTime; // return time elapsed in milliseconds
+    }
+
     public static void main(String[] args) {
         LinkedList sList = new LinkedList();
-
-        // add data to the list
-        sList.addNode(8);
-        sList.addNode(3);
-        sList.addNode(7);
-        sList.addNode(4);
-
-        // display original list
-        System.out.println("Original list:");
+        String[] sortNames = {"selection", "bubble", "insertion", "merge"};
+        Runnable[] sortMethods = new Runnable[]{
+            sList::selectionSort,
+            sList::bubbleSort,
+            sList::insertionSort,
+            sList::mergeSort
+        };
+        long[] sortTimes = new long[sortNames.length];
+        
+        // display unsorted list
+        sList.resetList();
+        System.out.println("unsorted list:");
         sList.display();
 
-        // sort the list using Selection Sort
-        sList.selectionSort();
+        for (int i = 0; i < sortNames.length; i++) {
+            sList.resetList();
+            sortTimes[i] = timeExecution(sortMethods[i]);
+        }
 
-        // display sorted list
-        System.out.println("Sorted list:");
-        sList.display();
+        System.out.println("\nelapsed times to sort:");
+        for (int i = 0; i < sortNames.length; i++) {
+            System.out.println(sortNames[i] + " sort: " + sortTimes[i] + " ms");
+        }
     }
 }
 LinkedList.main(null);
 ```
 
-    Original list:
-    8 3 7 4 
-    Sorted list:
-    3 4 7 8 
+    unsorted list:
+    8 39 7 43 5 91 12 2 86 33 7 
+    
+    elapsed times to sort:
+    selection sort: 0 ms
+    bubble sort: 0 ms
+    insertion sort: 0 ms
+    merge sort: 0 ms
 
+
+## Notes
+Make sure handling of linked list nodes is correct, otherwise there will NullPointerException error will be thrown. I specifically ran into problem when setting the next pointers, to fix add conditionals that check for null.
