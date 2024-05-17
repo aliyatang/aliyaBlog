@@ -529,6 +529,3 @@ LinkedList.main(null);
     insertion sort: 0 ms
     merge sort: 0 ms
 
-
-## Notes
-Make sure handling of linked list nodes is correct, otherwise there will NullPointerException error will be thrown. I specifically ran into problem when setting the next pointers, to fix add conditionals that check for null.
