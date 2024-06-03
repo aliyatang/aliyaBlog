@@ -43,7 +43,7 @@ Full Stack Ideation Digaram
 - Develop a comprehensive system to monitor and guide students through their Computer Science (CS) education journey.
 - Assist educators in assessing curriculum effectiveness and pinpointing areas for improvement.
 
-2. Data Capture and Pathway Recommendation (Art Gallery Project):
+2. Data Capture and Pathway Recommendation (Art Sorting Gallery Project):
 
 - Gather and store student data, including interests, performance, and progress.
 - Create a SQLite database to manage student information, designing tables to capture essential data such as interests, performance metrics, and course progression.
@@ -73,3 +73,11 @@ Full Stack Ideation Digaram
 - [Project - Sorting Art Gallery Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
 - [Project - UCSD Stuart Collection App](https://www.loom.com/share/6e468c902be848898f96bf8f695f963f)
 - [Project - Cafegato Promotional Site](https://www.loom.com/share/aa3a353263f9448ea979b20049f824eb)
+
+These projects and others have been demonstrated in various showcase events:
+- Night at the Museum May 2024
+- Night at the Museum Feb 2024
+- Night at the Museum Oct 2023
+- Night at the Museum May 2023
+- Night at the Museum Feb 2023
+- Night at the Museum Oct 2022
