@@ -83,13 +83,25 @@ Full Stack Ideation Digaram
 
 
 ## Links and Demonstrations of Projects
-- [Project - Rift Cyber Game Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
-- [Project - Sorting Art Gallery Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
-- [Project - UCSD Stuart Collection App](https://www.loom.com/share/6e468c902be848898f96bf8f695f963f)
-- [Project - Cafegato Promotional Site](https://www.loom.com/share/aa3a353263f9448ea979b20049f824eb)
-- [Presentation - Pneumonia Detection](https://docs.google.com/presentation/d/1AK04e1cO27SjEg7b9RZWmagIe_ciKjMPGfrnxFjA1KU/edit?usp=sharing)
-- [Project pt.1 - Pneumonia Detection](https://colab.research.google.com/drive/15aMkk4Ej8oaBO0AtkBuuKY5SHbcfEbut?usp=sharing)
-- [Project pt.2 - Pneumonia Detection](https://colab.research.google.com/drive/1hYFSEYNPzwbEbbu4mRzNvn6y3G5SVglJ?usp=sharing)
+[Project - Rift Cyber Game Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
+- Educational Content: Developed a “Password” game to educate users on the essential cybersecurity topic of password security.
+- Integration of Games: Implemented key system for each user to integrate multiple games (cyber and fight) together. 
+
+[Project - Sorting Art Gallery Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
+- Interactive Art Gallery: Developed an interactive platform where users can like artworks with sorting options to order the artworks by number of likes.
+- Sorting Algorithm: Developed different sorting algorithms) to sort the art pieces by number of likes.
+
+[Project - UCSD Stuart Collection App](https://www.loom.com/share/6e468c902be848898f96bf8f695f963f)
+- App Content: Developed and designed all main screen information pages, about pages, and managed links to external browsers.
+
+[Project - Cafegato Promotional Site](https://www.loom.com/share/aa3a353263f9448ea979b20049f824eb)
+- Game content: Developed a “Wordle” game clone to engage users in a fun and educational manner, and ultimately promote a theoretical “Cafegato” cafe 
+
+[Presentation - Pneumonia Detection](https://docs.google.com/presentation/d/1AK04e1cO27SjEg7b9RZWmagIe_ciKjMPGfrnxFjA1KU/edit?usp=sharing)
+
+[Project pt.1 - Pneumonia Detection](https://colab.research.google.com/drive/15aMkk4Ej8oaBO0AtkBuuKY5SHbcfEbut?usp=sharing)
+
+[Project pt.2 - Pneumonia Detection](https://colab.research.google.com/drive/1hYFSEYNPzwbEbbu4mRzNvn6y3G5SVglJ?usp=sharing)
 
 These projects and others have been demonstrated in various showcase events:
 - Night at the Museum May 2024
