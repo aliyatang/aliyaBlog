@@ -19,7 +19,7 @@ Key Requirements:
 - System development and data analysis
 
 # Personal Qualifications
-As a computer science student with a deep-rooted interest in data science, software development, and cybersecurity, I am excited about the oppurunity to participate and contribute to this internship. I am passionate about making computer science accessible and engaging for new learners. 
+As a computer science student with a deep-rooted interest in data science, software development, and cybersecurity, I am excited about the oppurunity to participate and contribute to this internship. My AP CSP and AP CSA classes have been an integral part of not only but also my journey as a student. It has shaped my work ethic, team work, presentation skills, and more. Thus, I am passionate about making computer science accessible and engaging for new learners. 
 
 I am confident in my ability to contribute efectively with my solid foundation in technical skills, extensive project experience, and a strong commitment to collaborative teamwork. I am excited to use technology to create innovative solutions.
 
@@ -73,7 +73,7 @@ Full Stack Ideation Digaram
 - Integrate and experiment with emerging OpenAI technologies, including voice and personal assistant applications
 
 
-### Implementation Overview:
+### Theoretical Implementation Overview:
 - Gather and ensure data is clean (step 3)
 - Neural network architectures (Convolutional Neural Networks for images like handwriting or diagrams, Recurrent Neural Networks for progress over time and patterns, Feedforward Nueral Networks to predict student sucess) implemented with TensorFlow
 - Note: TensorFlow is easy to use as the KerasAPI simiplifies nerual network creation and training, flexible library with support for various network architechture
