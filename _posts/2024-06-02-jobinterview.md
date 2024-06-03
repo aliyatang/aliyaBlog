@@ -26,8 +26,6 @@ I am confident in my ability to contribute efectively with my solid foundation i
 Creating content and courses for the Poway USD Computer Science Pathway
 - Skills: Graphic design, Canva, Figma
 
-![figma](/assets/img/jobint-1.png)
-
 College Pathway Focused Diagram
 ![college](/assets/img/jobint-5.png)
 
@@ -37,42 +35,59 @@ Scrum Process Diagram
 Full Stack Ideation Digaram
 ![fullstack](/assets/img/jobint-3.png)
 
+![figma](/assets/img/jobint-1.png)
+
 # Coding Qualifications
-1. Tracking System Overview:
+1. Content and Course Creation:
+- Develop and create educational content and courses tailored to the PUSD Computer Science Pathway.
+- Ensure that the content aligns with current educational standards and future trends in computer science education.
 
-- Develop a comprehensive system to monitor and guide students through their Computer Science (CS) education journey.
-- Assist educators in assessing curriculum effectiveness and pinpointing areas for improvement.
+2. Student Pathway Tracking System 
+- Develop a system to monitor students' progress through the computer science pathway. 
+- The system should enable educators to identify what aspects of the curriculum are effective and which need revision.
 
-2. Data Capture and Pathway Recommendation (Art Sorting Gallery Project):
+3. Data Capture and Pathway Recommendation
+- Collected data of student's progress, prerocess the data to ensure it is clean and suitable for training
+- SQLite database to store student data. Tables should be designed to hold relevant information: interests, work habits, performance, course progress, etc.
+- Implement RESTful APIs to handle CRUD opertions for student data
 
-- Gather and store student data, including interests, performance, and progress.
-- Create a SQLite database to manage student information, designing tables to capture essential data such as interests, performance metrics, and course progression.
-- Implement RESTful APIs to facilitate CRUD operations for student data.
+4. Personalized Learning Paths
+- Recommend various STEM/AP classes
+- Suggest projects, roles, programming languages, tools that support various learning styles: frontend development, backend development, DevOps, etc.
+- Use of nerual networks (inspiried by human brain to handle complex tasks involving large datasets and intricate patterns)
+- Collected data of students will be the training data for machine learning model, ALSO validate model's performance with a separate dataset or even real life data (relatively low risk task and can have human judgement along the way)
+- Decision trees to categorize students based on performance and learning preferences
 
-3. Suggest personalized CS pathways:
-- Recommended STEM courses
-- Relevant projects for Project-Based Learning
-- Specific learning tracks for frontend and backend development
-- Appropriate tools and programming languages for each student
-- AP exams aligned with CS and STEM objectives
+5. Student Pairing and Team Formation
+- Perform data analysis on key indicators to recommend optimal student pairings and teams.
+- Consider common interests, diverse perspectives, and invididual skills to create successful and complementary teams
+- Collaborative filtering machine learning algorithm to make recommendations based on preferences an behaviors of similar students
+- Content based filtering to make recommendations based on past courses and projects of user
 
-4. Machine Learning for Recommendations:
+6. Possibly Receive Feedback from Students
+- Natural Language Processing (NLP) to analyze student feedback and identify places of improvement
 
-- Collect comprehensive data on student interests, performance metrics, course progress, and other relevant factors to train machine learning models.
-- Apply algorithms like collaborative filtering to recommend CS pathways based on the trajectories of students with similar interests and performance.
-- Provide real-time recommendations to students, updating continuously based on their interactions with the system.
-5. Student Team Formation:
+7. Experience in Full Stack Development and Emerging Technologies:
+- Provide candidates with hands-on experience in full stack development
+- Explore technologies such as Machine Learning (ML) and Artificial Intelligence (AI)
+- Integrate and experiment with emerging OpenAI technologies, including voice and personal assistant applications
 
-- Analyze key indicators to recommend student pairings and team formations.
-- Balance common interests and diverse perspectives to form effective and harmonious teams.
-- Use algorithms to match students, optimizing team success and individual growth.
-- Utilize data from the database to create value scales for student interests and perspectives, clustering students based on similarities.
 
-## Video Demonstrations of Projects
+### Implementation Overview:
+- Gather and ensure data is clean (step 3)
+- Neural network architectures (Convolutional Neural Networks for images like handwriting or diagrams, Recurrent Neural Networks for progress over time and patterns, Feedforward Nueral Networks to predict student sucess) implemented with TensorFlow
+- Note: TensorFlow is easy to use as the KerasAPI simiplifies nerual network creation and training, flexible library with support for various network architechture
+- Train and validate data, evaluate and adjust as needed (step 4)
+- Deployment and integration of trained model into education platform, ensure it can handle real-time data and feedback
+- Monitoring and updates of performance
+
+
+## Links and Demonstrations of Projects
 - [Project - Rift Cyber Game Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
 - [Project - Sorting Art Gallery Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
 - [Project - UCSD Stuart Collection App](https://www.loom.com/share/6e468c902be848898f96bf8f695f963f)
 - [Project - Cafegato Promotional Site](https://www.loom.com/share/aa3a353263f9448ea979b20049f824eb)
+- [Project - Pneumonia Detection](https://docs.google.com/presentation/d/1AK04e1cO27SjEg7b9RZWmagIe_ciKjMPGfrnxFjA1KU/edit?usp=sharing)
 
 These projects and others have been demonstrated in various showcase events:
 - Night at the Museum May 2024
