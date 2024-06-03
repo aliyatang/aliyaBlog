@@ -102,6 +102,7 @@ Full Stack Ideation Digaram
 [Project pt.1 - Pneumonia Detection](https://colab.research.google.com/drive/15aMkk4Ej8oaBO0AtkBuuKY5SHbcfEbut?usp=sharing)
 
 [Project pt.2 - Pneumonia Detection](https://colab.research.google.com/drive/1hYFSEYNPzwbEbbu4mRzNvn6y3G5SVglJ?usp=sharing)
+- Developed a computer vision system using convolutional neural networks to help diagnose pneumonia from medical images of chest X-rays. 
 
 These projects and others have been demonstrated in various showcase events:
 - Night at the Museum May 2024
