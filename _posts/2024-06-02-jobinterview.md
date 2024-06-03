@@ -87,7 +87,9 @@ Full Stack Ideation Digaram
 - [Project - Sorting Art Gallery Site](https://www.loom.com/share/f5aa32ae51044fd58e5323cd1a7b1255)
 - [Project - UCSD Stuart Collection App](https://www.loom.com/share/6e468c902be848898f96bf8f695f963f)
 - [Project - Cafegato Promotional Site](https://www.loom.com/share/aa3a353263f9448ea979b20049f824eb)
-- [Project - Pneumonia Detection](https://docs.google.com/presentation/d/1AK04e1cO27SjEg7b9RZWmagIe_ciKjMPGfrnxFjA1KU/edit?usp=sharing)
+- [Presentation - Pneumonia Detection](https://docs.google.com/presentation/d/1AK04e1cO27SjEg7b9RZWmagIe_ciKjMPGfrnxFjA1KU/edit?usp=sharing)
+- [Project pt.1 - Pneumonia Detection](https://colab.research.google.com/drive/15aMkk4Ej8oaBO0AtkBuuKY5SHbcfEbut?usp=sharing)
+- [Project pt.2 - Pneumonia Detection](https://colab.research.google.com/drive/1hYFSEYNPzwbEbbu4mRzNvn6y3G5SVglJ?usp=sharing)
 
 These projects and others have been demonstrated in various showcase events:
 - Night at the Museum May 2024
