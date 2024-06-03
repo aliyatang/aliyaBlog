@@ -23,13 +23,19 @@ As a computer science student with a deep-rooted interest in data science, softw
 
 I am confident in my ability to contribute efectively with my solid foundation in technical skills, extensive project experience, and a strong commitment to collaborative teamwork. I am excited to use technology to create innovative solutions.
 
-
+Creating content and courses for the Poway USD Computer Science Pathway
 - Skills: Graphic design, Canva, Figma
+
 ![figma](/assets/img/jobint-1.png)
 
+College Pathway Focused Diagram
+![college](/assets/img/jobint-5.png)
 
 Scrum Process Diagram
 ![scrum](/assets/img/jobint-2.png)
+
+Full Stack Ideation Digaram
+![fullstack](/assets/img/jobint-3.png)
 
 # Coding Qualifications
 1. Tracking System Overview:
